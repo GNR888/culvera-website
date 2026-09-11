@@ -1096,18 +1096,6 @@
   margin: 0 0 1rem;
 }
 
-.app-preview__window {
-  border: 1px solid rgba(20, 46, 70, 0.15);
-  background: var(--color-ivory);
-  box-shadow: 0 30px 60px -30px rgba(20, 46, 70, 0.25);
-  transition: box-shadow var(--hover-duration) var(--ease-out-cinematic), transform var(--hover-duration) var(--ease-out-cinematic);
-}
-
-.app-preview__window:hover {
-  box-shadow: 0 40px 72px -30px rgba(20, 46, 70, 0.32);
-  transform: translateY(-3px);
-}
-
 .app-preview__row {
   transition: background var(--hover-duration) var(--ease-out-cinematic), padding-left var(--hover-duration) var(--ease-out-cinematic);
 }
@@ -1117,36 +1105,111 @@
   padding-left: 0.4rem;
 }
 
-.app-preview__titlebar {
+/* Map band — full width, sits above the results, not squeezed into a
+   sidebar column. */
+.demo-map-band {
+  height: min(26rem, 55vh);
+  min-height: 18rem;
+  border: 1px solid rgba(20, 46, 70, 0.15);
+  background: var(--color-sand);
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+}
+
+.demo-results {
   display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid rgba(20, 46, 70, 0.1);
+  flex-direction: column;
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
-.app-preview__dot {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: rgba(20, 46, 70, 0.15);
-}
-
-.app-preview__body {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-}
-
-.app-preview__map {
-  min-height: 22rem;
-  border-right: 1px solid rgba(20, 46, 70, 0.1);
-}
-
-.app-preview__panel {
-  padding: clamp(1.5rem, 3vw, 2rem);
+.demo-results__top {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.demo-results__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+  padding-top: clamp(1.75rem, 3vw, 2.5rem);
+  border-top: 1px solid rgba(20, 46, 70, 0.1);
+}
+
+@media (max-width: 900px) {
+  .demo-results__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.demo-results__grid > div {
+  transition: transform var(--hover-duration) var(--ease-out-cinematic);
+}
+
+.demo-results__grid > div:hover {
+  transform: translateY(var(--hover-lift));
+}
+
+/* Panel content fades/rises in fresh every time it's replaced — initial
+   load, a tab switch, a new map click — instead of hard-cutting. Works
+   as a CSS animation (not a transition) so it replays on every fresh
+   DOM insertion without any JS timing tricks. */
+.demo-fade {
+  animation: demo-fade-in var(--reveal-duration) var(--ease-out-cinematic) forwards;
+}
+
+@keyframes demo-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--reveal-distance) * 0.5));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Price sparkline: the line progressively reveals itself left to right
+   along its real trajectory (a stroke-dash draw, not a shape morph).
+   The start dot is there from the first frame; the end dot fades in
+   once the draw reaches it. */
+.demo-price polyline {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: demo-draw-line 1890ms var(--ease-out-cinematic) forwards;
+  animation-delay: 150ms;
+}
+
+@keyframes demo-draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.demo-price__end-dot {
+  opacity: 0;
+  animation: demo-fade-in 315ms var(--ease-out-cinematic) forwards;
+  animation-delay: 2040ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-fade {
+    animation: none;
+  }
+  .demo-price polyline {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .demo-price__end-dot {
+    animation: none;
+    opacity: 1;
+  }
+  .demo-results__grid > div:hover {
+    transform: none;
+  }
+  .demo-timeline::before {
+    display: none;
+  }
 }
 
 .app-preview__group-title {
@@ -1182,16 +1245,316 @@
 .app-preview__recommendation-title {
   font-family: var(--font-heading);
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: var(--color-navy);
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.3rem;
 }
 
 .app-preview__recommendation-sub {
   font-family: var(--font-nav);
   font-size: 0.8rem;
   color: var(--color-field-green-deep);
-  margin: 0 0 1rem;
+  margin: 0 0 1.1rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Demo results panel — hero stats, price sparkline, fertiliser/irrigation */
+/* timeline, harvest risk badges, crop tabs (demo.html — js/demo-map.js)   */
+/* ---------------------------------------------------------------------- */
+
+.context-strip {
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-crop-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+}
+
+.demo-crop-tab {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--color-navy);
+  background: transparent;
+  border: 1px solid rgba(20, 46, 70, 0.25);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: background var(--hover-duration) var(--ease-out-cinematic), color var(--hover-duration) var(--ease-out-cinematic), border-color var(--hover-duration) var(--ease-out-cinematic);
+}
+
+.demo-crop-tab:hover {
+  border-color: var(--color-gold);
+}
+
+.demo-crop-tab.is-active {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-ivory);
+}
+
+.demo-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.demo-stat {
+  flex: 1 1 0;
+  min-width: 6.5rem;
+  padding-right: 1rem;
+}
+
+.demo-stat + .demo-stat {
+  border-left: 1px solid rgba(20, 46, 70, 0.1);
+  padding-left: 1rem;
+}
+
+.demo-stat__label {
+  font-family: var(--font-nav);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  opacity: 0.55;
+  margin: 0 0 0.4rem;
+}
+
+.demo-stat__value {
+  font-family: var(--font-nav);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.demo-price {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.demo-price__values {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 5.5rem;
+}
+
+.demo-price__value {
+  font-family: var(--font-nav);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.demo-price__caption {
+  font-family: var(--font-nav);
+  font-size: 0.68rem;
+  color: var(--color-navy);
+  opacity: 0.5;
+}
+
+.demo-price__trend {
+  font-family: var(--font-nav);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-field-green-deep);
+  margin-top: 0.4rem;
+  display: block;
+}
+
+.demo-price__trend--falling {
+  color: #8a3b2e;
+}
+
+.demo-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* A soft highlight travels down the connector line on a slow, gentle
+   loop — reads as "irrigation flowing down" rather than a UI effect.
+   Aligned to sit directly over the timeline items' border-left. */
+.demo-timeline::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  width: 2px;
+  height: 3.5rem;
+  background: linear-gradient(to bottom, transparent, var(--color-gold), transparent);
+  opacity: 0;
+  pointer-events: none;
+  animation: demo-timeline-flow 4.5s linear infinite;
+}
+
+@keyframes demo-timeline-flow {
+  0% {
+    /* Bar is 3.5rem tall — keep top in [0, 100% - 3.5rem] so it never
+       extends past the timeline's own top or bottom edge. */
+    top: 0;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.5;
+  }
+  88% {
+    opacity: 0.5;
+  }
+  100% {
+    top: calc(100% - 3.5rem);
+    opacity: 0;
+  }
+}
+
+.demo-timeline__item {
+  position: relative;
+  padding: 0 0 1rem 1.4rem;
+  border-left: 1px solid rgba(20, 46, 70, 0.14);
+}
+
+.demo-timeline__item:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.demo-timeline__dot {
+  position: absolute;
+  left: -0.32rem;
+  top: 0.15rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--color-ivory);
+  border: 2px solid var(--color-gold);
+}
+
+.demo-timeline__timing {
+  font-family: var(--font-nav);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-field-green-deep);
+  margin: 0 0 0.2rem;
+}
+
+.demo-timeline__npk {
+  font-family: var(--font-nav);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin: 0 0 0.2rem;
+}
+
+.demo-timeline__method {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  color: var(--color-navy);
+  opacity: 0.65;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.demo-harvest__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.demo-harvest__date {
+  font-family: var(--font-nav);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.demo-risk-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.6rem;
+}
+
+.demo-pill {
+  display: inline-flex;
+  align-self: flex-start;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-nav);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.demo-pill--high {
+  color: #8a3b2e;
+  background: rgba(138, 59, 46, 0.08);
+  border: 1px solid rgba(138, 59, 46, 0.35);
+}
+
+.demo-pill--medium {
+  color: #8a5a1f;
+  background: rgba(197, 160, 82, 0.12);
+  border: 1px solid rgba(197, 160, 82, 0.35);
+}
+
+.demo-pill--low {
+  color: var(--color-field-green-deep);
+  background: rgba(89, 120, 90, 0.1);
+  border: 1px solid rgba(89, 120, 90, 0.3);
+}
+
+.demo-risk-action {
+  font-family: var(--font-nav);
+  font-size: 0.76rem;
+  color: var(--color-navy);
+  opacity: 0.6;
+  line-height: 1.5;
+  margin: 0.25rem 0 0;
+}
+
+.demo-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(20, 46, 70, 0.08);
+}
+
+.demo-note {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  color: var(--color-navy);
+  opacity: 0.6;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.demo-note b {
+  opacity: 1;
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .demo-stat {
+    min-width: 45%;
+    flex: 1 1 45%;
+    margin-bottom: 0.75rem;
+  }
+  .demo-stat:nth-child(odd) {
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
 .app-preview__note {
@@ -1205,26 +1568,11 @@
   opacity: 0.6;
 }
 
-@media (max-width: 800px) {
-  .app-preview__body {
-    grid-template-columns: 1fr;
-  }
-  .app-preview__map {
-    border-right: none;
-    border-bottom: 1px solid rgba(20, 46, 70, 0.1);
+@media (max-width: 600px) {
+  .demo-map-band {
+    height: 18rem;
     min-height: 14rem;
   }
-}
-
-/* ---------------------------------------------------------------------- */
-/* Live demo map + panel (demo.html — js/demo-map.js)                      */
-/* ---------------------------------------------------------------------- */
-
-.app-preview__map {
-  /* Leaflet needs an explicit, non-percentage-only box to size tiles into. */
-  height: 100%;
-  min-height: 22rem;
-  background: var(--color-sand);
 }
 
 .demo-panel__state {
@@ -1263,18 +1611,6 @@
 
 .demo-panel__state--error {
   color: #8a3b2e;
-}
-
-.demo-panel__warning {
-  font-family: var(--font-nav);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: #8a5a1f;
-  background: rgba(197, 160, 82, 0.12);
-  border: 1px solid rgba(197, 160, 82, 0.35);
-  border-radius: 4px;
-  padding: 0.65rem 0.85rem;
-  margin: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

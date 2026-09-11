@@ -145,25 +145,19 @@
         <h2 class="site-section__heading" id="preview-heading">See the decision layer.</h2>
       </div>
 
-      <div class="app-preview" data-reveal>
+      <div class="app-preview" data-reveal-group>
         <p class="app-preview__label">Real Agri-Sense model output — click anywhere on the map.</p>
-        <div class="app-preview__window">
-          <div class="app-preview__titlebar">
-            <span class="app-preview__dot"></span>
-            <span class="app-preview__dot"></span>
-            <span class="app-preview__dot"></span>
-          </div>
-          <div class="app-preview__body">
-            <div class="app-preview__map" id="culvera-demo-map" role="application" aria-label="Interactive map of Vietnam — click a location for a real crop recommendation"></div>
-            <div class="app-preview__panel" id="culvera-demo-panel">
-              <div class="demo-panel__state demo-panel__state--empty">
-                <p class="app-preview__group-title">GET STARTED</p>
-                <p>Click anywhere on the map — or one of the province markers — for a real crop
-                recommendation at your nearest supported province.</p>
-              </div>
-            </div>
+
+        <div class="demo-map-band" id="culvera-demo-map" role="application" aria-label="Interactive map of Vietnam — click a location for a real crop recommendation"></div>
+
+        <div class="demo-results" id="culvera-demo-panel">
+          <div class="demo-panel__state demo-panel__state--empty">
+            <p class="app-preview__group-title">GET STARTED</p>
+            <p>Click anywhere on the map — or one of the province markers — for real Agri-Sense
+            crop recommendations at your nearest supported province.</p>
           </div>
         </div>
+
         <p class="app-preview__note">
           The current Culvera prototype is an early decision support environment and
           continues to evolve as we add local field data, validation and more specialised
