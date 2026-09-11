@@ -1,0 +1,3172 @@
+[
+  {
+    "province": {
+      "key": "can_tho",
+      "name": "Cần Thơ",
+      "name_vi": "Cần Thơ",
+      "region": "Mekong Delta",
+      "dominant_crop": "rice (triple-crop)",
+      "capital_lat": 10.0341,
+      "capital_lon": 105.788,
+      "farm_lat": 10.05,
+      "farm_lon": 105.55
+    },
+    "recommendation": {
+      "location": {
+        "lat": 10.05,
+        "lon": 105.55,
+        "nearest_province": "Cần Thơ"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "mekong_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Cần Thơ, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 4.87,
+          "expected_revenue_vnd_per_ha": 35530398,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 150,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 75,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 150,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 12 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.95,
+        "soc_pct": 2.75,
+        "nitrogen_g_per_kg": 2.78,
+        "texture_class": "silty clay loam",
+        "cec_mmol_per_kg": 214.0,
+        "salinity_risk": "Moderate — Mekong Delta province",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:14Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 54m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "kien_giang",
+      "name": "Kiên Giang",
+      "name_vi": "Kiên Giang",
+      "region": "Mekong Delta",
+      "dominant_crop": "rice / shrimp-rice rotation",
+      "capital_lat": 10.0125,
+      "capital_lon": 105.08,
+      "farm_lat": 9.92,
+      "farm_lon": 105.38
+    },
+    "recommendation": {
+      "location": {
+        "lat": 9.92,
+        "lon": 105.38,
+        "nearest_province": "Kiên Giang"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "mekong_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Kiên Giang, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 4.95,
+          "expected_revenue_vnd_per_ha": 36130097,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 150,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 26 mm rain on Day 0 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 75,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 150,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 11 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.6,
+        "soc_pct": 2.74,
+        "nitrogen_g_per_kg": 3.12,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 230.0,
+        "salinity_risk": "Moderate — Mekong Delta province",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:54Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 15m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "an_giang",
+      "name": "An Giang",
+      "name_vi": "An Giang",
+      "region": "Mekong Delta",
+      "dominant_crop": "rice (flood-recession triple-crop)",
+      "capital_lat": 10.3826,
+      "capital_lon": 105.4361,
+      "farm_lat": 10.52,
+      "farm_lon": 105.15
+    },
+    "recommendation": {
+      "location": {
+        "lat": 10.52,
+        "lon": 105.15,
+        "nearest_province": "An Giang"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "mekong_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In An Giang, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 4.88,
+          "expected_revenue_vnd_per_ha": 35639430,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 135,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed",
+              "High soil organic carbon (>3%) — reduced N by 10%; soil mineralisation covers deficit"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 25 mm rain on Day 0 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 68,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 135,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 10 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.95,
+        "soc_pct": 3.3,
+        "nitrogen_g_per_kg": 2.83,
+        "texture_class": "silty clay loam",
+        "cec_mmol_per_kg": 197.3,
+        "salinity_risk": "Moderate — Mekong Delta province",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:56Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 14m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "thai_binh",
+      "name": "Thái Bình",
+      "name_vi": "Thái Bình",
+      "region": "Red River Delta",
+      "dominant_crop": "rice (double-crop)",
+      "capital_lat": 20.4464,
+      "capital_lon": 106.3398,
+      "farm_lat": 20.32,
+      "farm_lon": 106.52
+    },
+    "recommendation": {
+      "location": {
+        "lat": 20.32,
+        "lon": 106.52,
+        "nearest_province": "Thái Bình"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "red_river_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Thái Bình, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 5.56,
+          "expected_revenue_vnd_per_ha": 40575119,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 135,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed",
+              "High soil organic carbon (>3%) — reduced N by 10%; soil mineralisation covers deficit"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 27 mm rain on Day 2 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 68,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 135,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 10 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate.",
+              "⚠ High rainfall forecast (221 mm over 14 days) — prepare or clear drainage channels before planting. Excess water during establishment risks oxygen depletion and root damage."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 6.1,
+        "soc_pct": 3.46,
+        "nitrogen_g_per_kg": 2.09,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 167.0,
+        "salinity_risk": "Low — Red River Delta",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:58Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 13m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "nghe_an",
+      "name": "Nghệ An",
+      "name_vi": "Nghệ An",
+      "region": "North-Central Coast",
+      "dominant_crop": "rice / cassava / groundnut",
+      "capital_lat": 18.6733,
+      "capital_lon": 105.6922,
+      "farm_lat": 19.01,
+      "farm_lon": 105.48
+    },
+    "recommendation": {
+      "location": {
+        "lat": 19.01,
+        "lon": 105.48,
+        "nearest_province": "Nghệ An"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "red_river_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Nghệ An, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 5.36,
+          "expected_revenue_vnd_per_ha": 39102303,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 128,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "High rainfall forecast — reduced N by 15% to limit leaching",
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 32,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 28 mm rain on Day 2 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 64,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 32,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 128,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 10 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate.",
+              "⚠ High rainfall forecast (232 mm over 14 days) — prepare or clear drainage channels before planting. Excess water during establishment risks oxygen depletion and root damage."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 6.1,
+        "soc_pct": 1.44,
+        "nitrogen_g_per_kg": 1.26,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 155.8,
+        "salinity_risk": "Low — coastal influence",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 7.2,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "deficient",
+            "nitrogen": "deficient",
+            "texture": "adequate"
+          },
+          "issues": [
+            "Organic carbon is low (1.4%). Apply 2–3 t/ha of compost or rice straw to build soil organic matter.",
+            "Nitrogen is marginal (1.3 g/kg). Apply 20–40 kg/ha extra urea at early vegetative stage."
+          ]
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:23Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 50m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "quang_nam",
+      "name": "Quảng Nam",
+      "name_vi": "Quảng Nam",
+      "region": "Central Coast",
+      "dominant_crop": "rice / cassava",
+      "capital_lat": 15.5736,
+      "capital_lon": 108.4736,
+      "farm_lat": 15.72,
+      "farm_lon": 108.1
+    },
+    "recommendation": {
+      "location": {
+        "lat": 15.72,
+        "lon": 108.1,
+        "nearest_province": "Quảng Nam"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "mekong_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Quảng Nam, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 4.66,
+          "expected_revenue_vnd_per_ha": 34032170,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 115,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "High rainfall forecast — reduced N by 15% to limit leaching",
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed",
+              "High soil organic carbon (>3%) — reduced N by 10%; soil mineralisation covers deficit"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 29,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 45 mm rain on Day 0 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 58,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 29,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 115,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 12 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate.",
+              "⚠ High rainfall forecast (240 mm over 14 days) — prepare or clear drainage channels before planting. Excess water during establishment risks oxygen depletion and root damage."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "High rainfall expected during harvest window. Harvest at the start of the optimal window to reduce post-harvest drying burden and mould risk.",
+            "climate_risks": [
+              {
+                "risk": "High rainfall likely",
+                "severity": "medium",
+                "action": "Wet harvest conditions likely. Plan mechanical drying capacity or covered storage. Harvest early morning when humidity is lowest."
+              }
+            ],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.98,
+        "soc_pct": 3.31,
+        "nitrogen_g_per_kg": 2.51,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 215.2,
+        "salinity_risk": "Low — coastal influence",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:23Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 51m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "dak_lak",
+      "name": "Đắk Lắk",
+      "name_vi": "Đắk Lắk",
+      "region": "Central Highlands",
+      "dominant_crop": "Robusta coffee",
+      "capital_lat": 12.6797,
+      "capital_lon": 108.0377,
+      "farm_lat": 12.95,
+      "farm_lon": 108.18
+    },
+    "recommendation": {
+      "location": {
+        "lat": 12.95,
+        "lon": 108.18,
+        "nearest_province": "Đắk Lắk"
+      },
+      "season_info": {
+        "season": "annual",
+        "region_type": "central_highlands",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Đắk Lắk, this is the annual season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "cashew_raw",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 1.91,
+          "expected_revenue_vnd_per_ha": 60038543,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 30870000,
+            "month_2": 30555000,
+            "month_3": 30555000,
+            "month_4": 30555000,
+            "month_5": 29925000,
+            "month_6": 30870000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 102,
+            "P2O5_kg_per_ha": 60,
+            "K2O_kg_per_ha": 100,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "High rainfall forecast — reduced N by 15% to limit leaching",
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "Start of rains (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 36,
+                  "K2O_kg_per_ha": 34,
+                  "method": "Broadcast under canopy within the drip zone and water in. For young trees, apply in a ring at half the drip radius.",
+                  "product_examples": [
+                    "NPK 15-15-15",
+                    "Triple superphosphate"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Mid-season (Day 60–75)",
+                  "N_kg_per_ha": 35,
+                  "P2O5_kg_per_ha": 24,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Broadcast and allow rain to incorporate. Avoid application in waterlogged conditions.",
+                  "product_examples": [
+                    "Urea",
+                    "NPK 12-12-17"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "End of rains (Day 120–135)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Apply potassium-heavy blend to build reserves before the dry season.",
+                  "product_examples": [
+                    "KCl",
+                    "Sulphate of potash (SOP)"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 102,
+              "total_P2O5_kg_per_ha": 60,
+              "total_K2O_kg_per_ha": 100,
+              "general_notes": [
+                "Young trees (< 3 years): apply at 50% of recommended rate.",
+                "Do not apply nitrogen immediately before or during flowering — it can reduce fruit set.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Dig planting holes 50 × 50 × 50 cm. Backfill with topsoil + 3 kg compost per hole.",
+              "Minimal tillage beyond hole preparation — cashew develops a deep taproot; avoid mechanical disturbance."
+            ],
+            "planting": [
+              "Plant grafted seedlings at the start of the dry season — taproots establish before rains arrive.",
+              "Spacing: 7 × 7 m (200 trees/ha) or 10 × 10 m (100 trees/ha) for mechanised harvest operations.",
+              "Plant 1 seedling per prepared hole; backfill firmly and stake if site is exposed to wind.",
+              "⚠ 11 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Mature cashew (>3 years old) is drought-tolerant and rarely requires irrigation.",
+              "Young trees (year 1–2): irrigate every 10–14 days during dry months (December–April).",
+              "No irrigation needed from June–October when rainy season provides sufficient moisture."
+            ],
+            "pest_watch": [
+              "Tea mosquito bug (Helopeltis spp.): main pest at leaf flushing and flowering. Spray neem extract or approved pyrethroid weekly during these stages.",
+              "Anthracnose (Colletotrichum gloeosporioides): inspect new shoots for brown-black lesions. Apply copper-based fungicide at bud break and repeat after 14 days.",
+              "Stem and root borer: check base of trunk for entry holes and sawdust deposits. Apply chlorpyrifos solution to the trunk base as a preventive measure."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Transplant (yr 1, 0–30 d)",
+                "days": "0–30",
+                "moisture_target": "Consistently moist",
+                "frequency": "Every 3–5 days",
+                "note": "Irrigate until new leaf flush is confirmed — indicates successful root establishment"
+              },
+              {
+                "stage": "Early growth (yr 1, dry months)",
+                "days": "30–180",
+                "moisture_target": "Moist in top 30 cm",
+                "frequency": "Every 7–10 days (dry months)",
+                "note": "Stop irrigation entirely during rainy season; drought-tolerant once established"
+              },
+              {
+                "stage": "Flush/flower (annual, Nov–Feb)",
+                "days": "—",
+                "moisture_target": "Allow dry stress",
+                "frequency": "None if possible",
+                "note": "Dry conditions promote heavier and more uniform flowering"
+              },
+              {
+                "stage": "Fruit development (annual, Mar–Jun)",
+                "days": "—",
+                "moisture_target": "Moderate moisture",
+                "frequency": "Once if dry spell >14 days",
+                "note": "One supplemental irrigation during nut sizing improves kernel weight by 10–15%"
+              },
+              {
+                "stage": "Post-harvest (annual, Jul–Oct)",
+                "days": "—",
+                "moisture_target": "Allow full stress",
+                "frequency": "None",
+                "note": "Rainy season provides sufficient moisture; supplemental irrigation not needed"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-11-17",
+            "latest_harvest_date": "2026-12-02",
+            "optimal_harvest_window": "2026-11-22 to 2026-12-02",
+            "recommended_harvest_date": "2026-11-17",
+            "reason": "Tropical storm season peaks in September in this region. Harvesting 5 days before the optimal window reduces weather-loss risk. Yield penalty estimated at 3–5%.",
+            "climate_risks": [
+              {
+                "risk": "Storm season overlap",
+                "severity": "high",
+                "action": "Harvest by Nov 17 to avoid late-season storm risk (peak storm months in this region: September, October, November)."
+              },
+              {
+                "risk": "High rainfall likely",
+                "severity": "medium",
+                "action": "Wet harvest conditions likely. Plan mechanical drying capacity or covered storage. Harvest early morning when humidity is lowest."
+              }
+            ],
+            "harvest_tips": [
+              "Harvest fallen nuts daily — ground contact causes rapid quality deterioration.",
+              "The cashew apple is highly perishable; process or sell within 24 h.",
+              "Target 8–9% moisture for raw cashew nuts in storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.5,
+        "soc_pct": 2.3,
+        "nitrogen_g_per_kg": 1.9,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 187.7,
+        "salinity_risk": "Low — coastal influence",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 9.2,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:22Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 52m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "lam_dong",
+      "name": "Lâm Đồng",
+      "name_vi": "Lâm Đồng",
+      "region": "Central Highlands",
+      "dominant_crop": "Arabica coffee / vegetables / tea",
+      "capital_lat": 11.9407,
+      "capital_lon": 108.4384,
+      "farm_lat": 11.72,
+      "farm_lon": 108.2
+    },
+    "recommendation": {
+      "location": {
+        "lat": 11.72,
+        "lon": 108.2,
+        "nearest_province": "Lâm Đồng"
+      },
+      "season_info": {
+        "season": "annual",
+        "region_type": "central_highlands",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Lâm Đồng, this is the annual season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "cashew_raw",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 1.38,
+          "expected_revenue_vnd_per_ha": 43467805,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 30870000,
+            "month_2": 30555000,
+            "month_3": 30555000,
+            "month_4": 30555000,
+            "month_5": 29925000,
+            "month_6": 30870000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 102,
+            "P2O5_kg_per_ha": 60,
+            "K2O_kg_per_ha": 100,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "High rainfall forecast — reduced N by 15% to limit leaching",
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "Start of rains (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 36,
+                  "K2O_kg_per_ha": 34,
+                  "method": "Broadcast under canopy within the drip zone and water in. For young trees, apply in a ring at half the drip radius.",
+                  "product_examples": [
+                    "NPK 15-15-15",
+                    "Triple superphosphate"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Mid-season (Day 60–75)",
+                  "N_kg_per_ha": 35,
+                  "P2O5_kg_per_ha": 24,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Broadcast and allow rain to incorporate. Avoid application in waterlogged conditions.",
+                  "product_examples": [
+                    "Urea",
+                    "NPK 12-12-17"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "End of rains (Day 120–135)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Apply potassium-heavy blend to build reserves before the dry season.",
+                  "product_examples": [
+                    "KCl",
+                    "Sulphate of potash (SOP)"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 102,
+              "total_P2O5_kg_per_ha": 60,
+              "total_K2O_kg_per_ha": 100,
+              "general_notes": [
+                "Young trees (< 3 years): apply at 50% of recommended rate.",
+                "Do not apply nitrogen immediately before or during flowering — it can reduce fruit set.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Dig planting holes 50 × 50 × 50 cm. Backfill with topsoil + 3 kg compost per hole.",
+              "Minimal tillage beyond hole preparation — cashew develops a deep taproot; avoid mechanical disturbance."
+            ],
+            "planting": [
+              "Plant grafted seedlings at the start of the dry season — taproots establish before rains arrive.",
+              "Spacing: 7 × 7 m (200 trees/ha) or 10 × 10 m (100 trees/ha) for mechanised harvest operations.",
+              "Plant 1 seedling per prepared hole; backfill firmly and stake if site is exposed to wind.",
+              "⚠ 8 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Mature cashew (>3 years old) is drought-tolerant and rarely requires irrigation.",
+              "Young trees (year 1–2): irrigate every 10–14 days during dry months (December–April).",
+              "No irrigation needed from June–October when rainy season provides sufficient moisture."
+            ],
+            "pest_watch": [
+              "Tea mosquito bug (Helopeltis spp.): main pest at leaf flushing and flowering. Spray neem extract or approved pyrethroid weekly during these stages.",
+              "Anthracnose (Colletotrichum gloeosporioides): inspect new shoots for brown-black lesions. Apply copper-based fungicide at bud break and repeat after 14 days.",
+              "Stem and root borer: check base of trunk for entry holes and sawdust deposits. Apply chlorpyrifos solution to the trunk base as a preventive measure."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Transplant (yr 1, 0–30 d)",
+                "days": "0–30",
+                "moisture_target": "Consistently moist",
+                "frequency": "Every 3–5 days",
+                "note": "Irrigate until new leaf flush is confirmed — indicates successful root establishment"
+              },
+              {
+                "stage": "Early growth (yr 1, dry months)",
+                "days": "30–180",
+                "moisture_target": "Moist in top 30 cm",
+                "frequency": "Every 7–10 days (dry months)",
+                "note": "Stop irrigation entirely during rainy season; drought-tolerant once established"
+              },
+              {
+                "stage": "Flush/flower (annual, Nov–Feb)",
+                "days": "—",
+                "moisture_target": "Allow dry stress",
+                "frequency": "None if possible",
+                "note": "Dry conditions promote heavier and more uniform flowering"
+              },
+              {
+                "stage": "Fruit development (annual, Mar–Jun)",
+                "days": "—",
+                "moisture_target": "Moderate moisture",
+                "frequency": "Once if dry spell >14 days",
+                "note": "One supplemental irrigation during nut sizing improves kernel weight by 10–15%"
+              },
+              {
+                "stage": "Post-harvest (annual, Jul–Oct)",
+                "days": "—",
+                "moisture_target": "Allow full stress",
+                "frequency": "None",
+                "note": "Rainy season provides sufficient moisture; supplemental irrigation not needed"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-11-17",
+            "latest_harvest_date": "2026-12-02",
+            "optimal_harvest_window": "2026-11-22 to 2026-12-02",
+            "recommended_harvest_date": "2026-11-17",
+            "reason": "Tropical storm season peaks in September in this region. Harvesting 5 days before the optimal window reduces weather-loss risk. Yield penalty estimated at 3–5%.",
+            "climate_risks": [
+              {
+                "risk": "Storm season overlap",
+                "severity": "high",
+                "action": "Harvest by Nov 17 to avoid late-season storm risk (peak storm months in this region: September, October, November)."
+              },
+              {
+                "risk": "High rainfall likely",
+                "severity": "medium",
+                "action": "Wet harvest conditions likely. Plan mechanical drying capacity or covered storage. Harvest early morning when humidity is lowest."
+              }
+            ],
+            "harvest_tips": [
+              "Harvest fallen nuts daily — ground contact causes rapid quality deterioration.",
+              "The cashew apple is highly perishable; process or sell within 24 h.",
+              "Target 8–9% moisture for raw cashew nuts in storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.6,
+        "soc_pct": 2.17,
+        "nitrogen_g_per_kg": 2.11,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 177.0,
+        "salinity_risk": "Low — coastal influence",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:23Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 52m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "dong_nai",
+      "name": "Đồng Nai",
+      "name_vi": "Đồng Nai",
+      "region": "South-East",
+      "dominant_crop": "rubber / cashew / industrial crops",
+      "capital_lat": 10.9574,
+      "capital_lon": 106.8426,
+      "farm_lat": 11.32,
+      "farm_lon": 107.18
+    },
+    "recommendation": {
+      "location": {
+        "lat": 11.32,
+        "lon": 107.18,
+        "nearest_province": "Đồng Nai"
+      },
+      "season_info": {
+        "season": "annual",
+        "region_type": "central_highlands",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Đồng Nai, this is the annual season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "cashew_raw",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 1.85,
+          "expected_revenue_vnd_per_ha": 58292669,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 30870000,
+            "month_2": 30555000,
+            "month_3": 30555000,
+            "month_4": 30555000,
+            "month_5": 29925000,
+            "month_6": 30870000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 102,
+            "P2O5_kg_per_ha": 60,
+            "K2O_kg_per_ha": 100,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "High rainfall forecast — reduced N by 15% to limit leaching",
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "Start of rains (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 36,
+                  "K2O_kg_per_ha": 34,
+                  "method": "Broadcast under canopy within the drip zone and water in. For young trees, apply in a ring at half the drip radius.",
+                  "product_examples": [
+                    "NPK 15-15-15",
+                    "Triple superphosphate"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 30 mm rain on Day 2 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "Mid-season (Day 60–75)",
+                  "N_kg_per_ha": 35,
+                  "P2O5_kg_per_ha": 24,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Broadcast and allow rain to incorporate. Avoid application in waterlogged conditions.",
+                  "product_examples": [
+                    "Urea",
+                    "NPK 12-12-17"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "End of rains (Day 120–135)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Apply potassium-heavy blend to build reserves before the dry season.",
+                  "product_examples": [
+                    "KCl",
+                    "Sulphate of potash (SOP)"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 102,
+              "total_P2O5_kg_per_ha": 60,
+              "total_K2O_kg_per_ha": 100,
+              "general_notes": [
+                "Young trees (< 3 years): apply at 50% of recommended rate.",
+                "Do not apply nitrogen immediately before or during flowering — it can reduce fruit set.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Dig planting holes 50 × 50 × 50 cm. Backfill with topsoil + 3 kg compost per hole.",
+              "Minimal tillage beyond hole preparation — cashew develops a deep taproot; avoid mechanical disturbance."
+            ],
+            "planting": [
+              "Plant grafted seedlings at the start of the dry season — taproots establish before rains arrive.",
+              "Spacing: 7 × 7 m (200 trees/ha) or 10 × 10 m (100 trees/ha) for mechanised harvest operations.",
+              "Plant 1 seedling per prepared hole; backfill firmly and stake if site is exposed to wind.",
+              "⚠ 12 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Mature cashew (>3 years old) is drought-tolerant and rarely requires irrigation.",
+              "Young trees (year 1–2): irrigate every 10–14 days during dry months (December–April).",
+              "No irrigation needed from June–October when rainy season provides sufficient moisture."
+            ],
+            "pest_watch": [
+              "Tea mosquito bug (Helopeltis spp.): main pest at leaf flushing and flowering. Spray neem extract or approved pyrethroid weekly during these stages.",
+              "Anthracnose (Colletotrichum gloeosporioides): inspect new shoots for brown-black lesions. Apply copper-based fungicide at bud break and repeat after 14 days.",
+              "Stem and root borer: check base of trunk for entry holes and sawdust deposits. Apply chlorpyrifos solution to the trunk base as a preventive measure."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Transplant (yr 1, 0–30 d)",
+                "days": "0–30",
+                "moisture_target": "Consistently moist",
+                "frequency": "Every 3–5 days",
+                "note": "Irrigate until new leaf flush is confirmed — indicates successful root establishment"
+              },
+              {
+                "stage": "Early growth (yr 1, dry months)",
+                "days": "30–180",
+                "moisture_target": "Moist in top 30 cm",
+                "frequency": "Every 7–10 days (dry months)",
+                "note": "Stop irrigation entirely during rainy season; drought-tolerant once established"
+              },
+              {
+                "stage": "Flush/flower (annual, Nov–Feb)",
+                "days": "—",
+                "moisture_target": "Allow dry stress",
+                "frequency": "None if possible",
+                "note": "Dry conditions promote heavier and more uniform flowering"
+              },
+              {
+                "stage": "Fruit development (annual, Mar–Jun)",
+                "days": "—",
+                "moisture_target": "Moderate moisture",
+                "frequency": "Once if dry spell >14 days",
+                "note": "One supplemental irrigation during nut sizing improves kernel weight by 10–15%"
+              },
+              {
+                "stage": "Post-harvest (annual, Jul–Oct)",
+                "days": "—",
+                "moisture_target": "Allow full stress",
+                "frequency": "None",
+                "note": "Rainy season provides sufficient moisture; supplemental irrigation not needed"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-11-17",
+            "latest_harvest_date": "2026-12-02",
+            "optimal_harvest_window": "2026-11-22 to 2026-12-02",
+            "recommended_harvest_date": "2026-11-17",
+            "reason": "Tropical storm season peaks in September in this region. Harvesting 5 days before the optimal window reduces weather-loss risk. Yield penalty estimated at 3–5%.",
+            "climate_risks": [
+              {
+                "risk": "Storm season overlap",
+                "severity": "high",
+                "action": "Harvest by Nov 17 to avoid late-season storm risk (peak storm months in this region: September, October, November)."
+              }
+            ],
+            "harvest_tips": [
+              "Harvest fallen nuts daily — ground contact causes rapid quality deterioration.",
+              "The cashew apple is highly perishable; process or sell within 24 h.",
+              "Target 8–9% moisture for raw cashew nuts in storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.3,
+        "soc_pct": 2.26,
+        "nitrogen_g_per_kg": 1.64,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 161.0,
+        "salinity_risk": "Very Low",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 9.0,
+          "nutrient_status": {
+            "ph": "deficient",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": [
+            "Your soil is acidic (pH 5.3). Apply agricultural lime at 1.0 t/ha before planting to raise pH to 5.5–6.0."
+          ]
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:22Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 52m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "dong_thap",
+      "name": "Đồng Tháp",
+      "name_vi": "Đồng Tháp",
+      "region": "Mekong Delta",
+      "dominant_crop": "rice (flood-recession triple-crop) / lotus",
+      "capital_lat": 10.4667,
+      "capital_lon": 105.6333,
+      "farm_lat": 10.6,
+      "farm_lon": 105.48
+    },
+    "recommendation": {
+      "location": {
+        "lat": 10.6,
+        "lon": 105.48,
+        "nearest_province": "Đồng Tháp"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "mekong_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Đồng Tháp, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 4.9,
+          "expected_revenue_vnd_per_ha": 35735608,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 135,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed",
+              "High soil organic carbon (>3%) — reduced N by 10%; soil mineralisation covers deficit"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 25 mm rain on Day 2 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 68,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 135,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 11 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 6.1,
+        "soc_pct": 3.04,
+        "nitrogen_g_per_kg": 2.83,
+        "texture_class": "silty clay loam",
+        "cec_mmol_per_kg": 227.3,
+        "salinity_risk": "Moderate — Mekong Delta province",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 10.0,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T04:02Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 13m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "soc_trang",
+      "name": "Sóc Trăng",
+      "name_vi": "Sóc Trăng",
+      "region": "Mekong Delta",
+      "dominant_crop": "rice / shrimp-rice rotation",
+      "capital_lat": 9.6025,
+      "capital_lon": 105.9739,
+      "farm_lat": 9.73,
+      "farm_lon": 105.88
+    },
+    "recommendation": {
+      "location": {
+        "lat": 9.73,
+        "lon": 105.88,
+        "nearest_province": "Sóc Trăng"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "mekong_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Sóc Trăng, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 4.81,
+          "expected_revenue_vnd_per_ha": 35081448,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 150,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 75,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 150,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Deep plough to 25–30 cm to break compact subsoil — maize roots require well-aerated soil.",
+              "Ridge planting (rows on 15–20 cm raised ridges) significantly improves drainage on heavy clay."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 14 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 6.05,
+        "soc_pct": 2.65,
+        "nitrogen_g_per_kg": 2.04,
+        "texture_class": "clay",
+        "cec_mmol_per_kg": 235.7,
+        "salinity_risk": "Moderate — Mekong Delta province",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 9.2,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "deficient"
+          },
+          "issues": [
+            "Heavy clay soil can waterlog easily. Use raised beds and avoid over-irrigation."
+          ]
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:20Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 56m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "gia_lai",
+      "name": "Gia Lai",
+      "name_vi": "Gia Lai",
+      "region": "Central Highlands",
+      "dominant_crop": "Robusta coffee / pepper / rubber",
+      "capital_lat": 13.9667,
+      "capital_lon": 108.0,
+      "farm_lat": 13.77,
+      "farm_lon": 107.89
+    },
+    "recommendation": {
+      "location": {
+        "lat": 13.77,
+        "lon": 107.89,
+        "nearest_province": "Gia Lai"
+      },
+      "season_info": {
+        "season": "annual",
+        "region_type": "central_highlands",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Gia Lai, this is the annual season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "cashew_raw",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 1.37,
+          "expected_revenue_vnd_per_ha": 43060685,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 30870000,
+            "month_2": 30555000,
+            "month_3": 30555000,
+            "month_4": 30555000,
+            "month_5": 29925000,
+            "month_6": 30870000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 102,
+            "P2O5_kg_per_ha": 60,
+            "K2O_kg_per_ha": 100,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "High rainfall forecast — reduced N by 15% to limit leaching",
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "Start of rains (Day 0)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 36,
+                  "K2O_kg_per_ha": 34,
+                  "method": "Broadcast under canopy within the drip zone and water in. For young trees, apply in a ring at half the drip radius.",
+                  "product_examples": [
+                    "NPK 15-15-15",
+                    "Triple superphosphate"
+                  ],
+                  "warnings": [
+                    "⚠ Forecast shows 26 mm rain on Day 2 — consider rescheduling this application to avoid nitrogen leaching."
+                  ]
+                },
+                {
+                  "timing": "Mid-season (Day 60–75)",
+                  "N_kg_per_ha": 35,
+                  "P2O5_kg_per_ha": 24,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Broadcast and allow rain to incorporate. Avoid application in waterlogged conditions.",
+                  "product_examples": [
+                    "Urea",
+                    "NPK 12-12-17"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "End of rains (Day 120–135)",
+                  "N_kg_per_ha": 34,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 33,
+                  "method": "Apply potassium-heavy blend to build reserves before the dry season.",
+                  "product_examples": [
+                    "KCl",
+                    "Sulphate of potash (SOP)"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 102,
+              "total_P2O5_kg_per_ha": 60,
+              "total_K2O_kg_per_ha": 100,
+              "general_notes": [
+                "Young trees (< 3 years): apply at 50% of recommended rate.",
+                "Do not apply nitrogen immediately before or during flowering — it can reduce fruit set.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Dig planting holes 40 × 40 × 40 cm. Loam is well-suited to cashew — no special amendment needed."
+            ],
+            "planting": [
+              "Plant grafted seedlings at the start of the dry season — taproots establish before rains arrive.",
+              "Spacing: 7 × 7 m (200 trees/ha) or 10 × 10 m (100 trees/ha) for mechanised harvest operations.",
+              "Plant 1 seedling per prepared hole; backfill firmly and stake if site is exposed to wind.",
+              "⚠ 13 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Mature cashew (>3 years old) is drought-tolerant and rarely requires irrigation.",
+              "Young trees (year 1–2): irrigate every 10–14 days during dry months (December–April).",
+              "No irrigation needed from June–October when rainy season provides sufficient moisture.",
+              "⚠ High rainfall forecast (202 mm over 14 days) — prepare or clear drainage channels before planting. Excess water during establishment risks oxygen depletion and root damage."
+            ],
+            "pest_watch": [
+              "Tea mosquito bug (Helopeltis spp.): main pest at leaf flushing and flowering. Spray neem extract or approved pyrethroid weekly during these stages.",
+              "Anthracnose (Colletotrichum gloeosporioides): inspect new shoots for brown-black lesions. Apply copper-based fungicide at bud break and repeat after 14 days.",
+              "Stem and root borer: check base of trunk for entry holes and sawdust deposits. Apply chlorpyrifos solution to the trunk base as a preventive measure."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Transplant (yr 1, 0–30 d)",
+                "days": "0–30",
+                "moisture_target": "Consistently moist",
+                "frequency": "Every 3–5 days",
+                "note": "Irrigate until new leaf flush is confirmed — indicates successful root establishment"
+              },
+              {
+                "stage": "Early growth (yr 1, dry months)",
+                "days": "30–180",
+                "moisture_target": "Moist in top 30 cm",
+                "frequency": "Every 7–10 days (dry months)",
+                "note": "Stop irrigation entirely during rainy season; drought-tolerant once established"
+              },
+              {
+                "stage": "Flush/flower (annual, Nov–Feb)",
+                "days": "—",
+                "moisture_target": "Allow dry stress",
+                "frequency": "None if possible",
+                "note": "Dry conditions promote heavier and more uniform flowering"
+              },
+              {
+                "stage": "Fruit development (annual, Mar–Jun)",
+                "days": "—",
+                "moisture_target": "Moderate moisture",
+                "frequency": "Once if dry spell >14 days",
+                "note": "One supplemental irrigation during nut sizing improves kernel weight by 10–15%"
+              },
+              {
+                "stage": "Post-harvest (annual, Jul–Oct)",
+                "days": "—",
+                "moisture_target": "Allow full stress",
+                "frequency": "None",
+                "note": "Rainy season provides sufficient moisture; supplemental irrigation not needed"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-11-17",
+            "latest_harvest_date": "2026-12-02",
+            "optimal_harvest_window": "2026-11-22 to 2026-12-02",
+            "recommended_harvest_date": "2026-11-17",
+            "reason": "Tropical storm season peaks in September in this region. Harvesting 5 days before the optimal window reduces weather-loss risk. Yield penalty estimated at 3–5%.",
+            "climate_risks": [
+              {
+                "risk": "Storm season overlap",
+                "severity": "high",
+                "action": "Harvest by Nov 17 to avoid late-season storm risk (peak storm months in this region: September, October, November)."
+              },
+              {
+                "risk": "High rainfall likely",
+                "severity": "medium",
+                "action": "Wet harvest conditions likely. Plan mechanical drying capacity or covered storage. Harvest early morning when humidity is lowest."
+              }
+            ],
+            "harvest_tips": [
+              "Harvest fallen nuts daily — ground contact causes rapid quality deterioration.",
+              "The cashew apple is highly perishable; process or sell within 24 h.",
+              "Target 8–9% moisture for raw cashew nuts in storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.7,
+        "soc_pct": 2.29,
+        "nitrogen_g_per_kg": 1.71,
+        "texture_class": "loam",
+        "cec_mmol_per_kg": 208.2,
+        "salinity_risk": "Low — coastal influence",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 9.2,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:22Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 54m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  },
+  {
+    "province": {
+      "key": "nam_dinh",
+      "name": "Nam Định",
+      "name_vi": "Nam Định",
+      "region": "Red River Delta",
+      "dominant_crop": "rice (double-crop)",
+      "capital_lat": 20.42,
+      "capital_lon": 106.1683,
+      "farm_lat": 20.25,
+      "farm_lon": 106.28
+    },
+    "recommendation": {
+      "location": {
+        "lat": 20.25,
+        "lon": 106.28,
+        "nearest_province": "Nam Định"
+      },
+      "season_info": {
+        "season": "Mùa",
+        "region_type": "red_river_delta",
+        "in_transition": false,
+        "next_season": null,
+        "days_until_next_season": null,
+        "banner_message": "It is currently September. In Nam Định, this is the Mùa season. The best time to plant is now — here are your recommendations."
+      },
+      "recommendations": [
+        {
+          "crop": "maize",
+          "probability": 1.0,
+          "predicted_yield_t_ha": 5.4,
+          "expected_revenue_vnd_per_ha": 39453681,
+          "confidence": "high",
+          "price_forecast_vnd_per_tonne": {
+            "month_1": 7373000,
+            "month_2": 7446000,
+            "month_3": 7519000,
+            "month_4": 7592000,
+            "month_5": 7665000,
+            "month_6": 7519000
+          },
+          "price_trend": "stable",
+          "fertiliser_recommendation": {
+            "N_kg_per_ha": 150,
+            "P2O5_kg_per_ha": 80,
+            "K2O_kg_per_ha": 80,
+            "lime_tonnes_per_ha": 0.0,
+            "notes": [
+              "Soil pH within optimal range (5.0–7.5) — no pH adjustment needed"
+            ],
+            "schedule": {
+              "applications": [
+                {
+                  "timing": "At planting (Day 0)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 80,
+                  "K2O_kg_per_ha": 40,
+                  "method": "Band application 5 cm below and to the side of the seed row to avoid fertiliser burn.",
+                  "product_examples": [
+                    "DAP (18-46-0) for P + N",
+                    "Muriate of potash (KCl) for K"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "V6 stage (Day 35–42)",
+                  "N_kg_per_ha": 75,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Side-dress along crop rows at 15 cm depth. Cultivate lightly to incorporate. Irrigate after if no rain within 48 h.",
+                  "product_examples": [
+                    "Urea (46% N)",
+                    "Ammonium sulphate (21% N)"
+                  ],
+                  "warnings": []
+                },
+                {
+                  "timing": "Tasselling (Day 55–65)",
+                  "N_kg_per_ha": 38,
+                  "P2O5_kg_per_ha": 0,
+                  "K2O_kg_per_ha": 20,
+                  "method": "Top-dress between rows or foliar spray. Keep off leaves in high temperatures to reduce burn risk.",
+                  "product_examples": [
+                    "Urea",
+                    "KCl"
+                  ],
+                  "warnings": []
+                }
+              ],
+              "total_N_kg_per_ha": 150,
+              "total_P2O5_kg_per_ha": 80,
+              "total_K2O_kg_per_ha": 80,
+              "general_notes": [
+                "Never apply all nitrogen at once — split into at least 3 applications to reduce losses.",
+                "Irrigate after each application if no significant rain (≥ 10 mm) is expected within 48 hours.",
+                "Wear gloves when handling — avoid inhaling fertiliser dust."
+              ]
+            }
+          },
+          "farming_methods": {
+            "land_preparation": [
+              "Plough to 20–25 cm. Ridge planting recommended on lower-lying clay loam fields.",
+              "Apply 2 t/ha compost before final tillage to improve aeration."
+            ],
+            "planting": [
+              "Plant at start of rainy season. Drainage is critical — avoid low-lying fields for Mùa maize.",
+              "Direct sow 2–3 seeds per hill at 5 cm depth; row spacing: 70 cm; hill spacing: 25 cm.",
+              "⚠ 10 rainy days forecast — if soil is waterlogged, delay planting by 5–7 days. Saturated soil at planting increases damping-off and root rot risk."
+            ],
+            "water_management": [
+              "Maize requires 500–700 mm total water over the full growing season.",
+              "Most critical stage: silking (days 55–70). Water stress at silking reduces final yield by 30–50%.",
+              "Check soil moisture by pressing a handful of soil — if it crumbles and does not form a ball, irrigate."
+            ],
+            "pest_watch": [
+              "Fall armyworm: scout weekly from week 2 throughout Mùa season.",
+              "Stem rot and downy mildew are elevated risks in Mùa wet conditions — ensure good field drainage."
+            ],
+            "irrigation_schedule": [
+              {
+                "stage": "Germination",
+                "days": "0–10",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Daily if no rain",
+                "note": "Critical for uniform emergence; waterlogging at germination causes damping-off"
+              },
+              {
+                "stage": "Vegetative",
+                "days": "10–40",
+                "moisture_target": "50–65% field capacity",
+                "frequency": "Every 4–5 days",
+                "note": "30–50 mm per irrigation event; adjust based on daily rainfall"
+              },
+              {
+                "stage": "Silking",
+                "days": "40–65",
+                "moisture_target": "70–80% field capacity",
+                "frequency": "Every 2–3 days",
+                "note": "Most critical stage — water stress here permanently reduces yield by 30–50%"
+              },
+              {
+                "stage": "Grain fill",
+                "days": "65–90",
+                "moisture_target": "60–70% field capacity",
+                "frequency": "Every 5–7 days",
+                "note": "Reduce frequency as grain hardens; excess moisture at this stage risks lodging"
+              },
+              {
+                "stage": "Maturity",
+                "days": "90–110",
+                "moisture_target": "Allow gradual drying",
+                "frequency": "Stop irrigation",
+                "note": "Stop 2–3 weeks before harvest to allow dry-down for mechanised harvesting"
+              }
+            ]
+          },
+          "harvest_timing": {
+            "estimated_planting_date": "2026-09-18",
+            "earliest_harvest_date": "2026-12-22",
+            "latest_harvest_date": "2027-01-11",
+            "optimal_harvest_window": "2027-01-01 to 2027-01-11",
+            "recommended_harvest_date": "2027-01-01",
+            "reason": "No major climate risks detected for the harvest window. Harvest at the start of the optimal window for the best balance of maturity and field-loss risk.",
+            "climate_risks": [],
+            "harvest_tips": [
+              "Harvest when husks are dry brown and kernel moisture is around 25–28%.",
+              "Shell cobs within 2 days to prevent mould in humid conditions.",
+              "Target moisture content: 25% at harvest, dry to 13% for safe storage."
+            ],
+            "data_basis": "Historical climate NASA POWER 2025 average for this province"
+          }
+        }
+      ],
+      "transition": null,
+      "farm_plan": null,
+      "is_high_risk": false,
+      "warnings": [],
+      "soil_data": {
+        "ph": 5.98,
+        "soc_pct": 2.2,
+        "nitrogen_g_per_kg": 1.6,
+        "texture_class": "clay loam",
+        "cec_mmol_per_kg": 159.0,
+        "salinity_risk": "Low — Red River Delta",
+        "source": "SoilGrids 2.0",
+        "health": {
+          "health_score": 9.2,
+          "nutrient_status": {
+            "ph": "adequate",
+            "organic_carbon": "adequate",
+            "nitrogen": "adequate",
+            "texture": "adequate"
+          },
+          "issues": []
+        }
+      },
+      "data_source": "soilgrids",
+      "data_freshness": {
+        "weather_forecast": {
+          "source": "Open-Meteo",
+          "is_live": true,
+          "fetched_at": "2026-09-11T03:23Z",
+          "horizon_days": 14,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "updated 54m ago"
+        },
+        "soil_data": {
+          "source": "SoilGrids 2.0",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": "2023",
+          "latest_image_date": null,
+          "note": "Updated annually"
+        },
+        "market_prices": {
+          "source": "Hardcoded GSO baseline + seasonal model",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": null,
+          "note": "Live price scraping coming in v2"
+        },
+        "ndvi": {
+          "source": "Sentinel-2 via Planetary Computer",
+          "is_live": false,
+          "fetched_at": null,
+          "horizon_days": null,
+          "vintage": null,
+          "latest_image_date": "2026-09-01",
+          "note": "Latest scene est. 2026-09-01 — 5–14 day revisit"
+        }
+      }
+    }
+  }
+]

@@ -31,12 +31,6 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
   />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-  <script>
-    // Points the live demo at the Agri-Sense backend. Update this once the
-    // service is deployed (Railway — see Agri-Sense/CLAUDE.md) and add this
-    // site's origin to that service's CORS_ORIGINS.
-    window.CULVERA_API_BASE = "http://localhost:8001";
-  </script>
 </head>
 <body class="contact-page">
 
@@ -152,7 +146,7 @@
       </div>
 
       <div class="app-preview" data-reveal>
-        <p class="app-preview__label">Live from the Agri-Sense backend — click anywhere on the map.</p>
+        <p class="app-preview__label">Real Agri-Sense model output — click anywhere on the map.</p>
         <div class="app-preview__window">
           <div class="app-preview__titlebar">
             <span class="app-preview__dot"></span>
@@ -160,12 +154,12 @@
             <span class="app-preview__dot"></span>
           </div>
           <div class="app-preview__body">
-            <div class="app-preview__map" id="culvera-demo-map" role="application" aria-label="Interactive map of Vietnam — click a location for a live crop recommendation"></div>
+            <div class="app-preview__map" id="culvera-demo-map" role="application" aria-label="Interactive map of Vietnam — click a location for a real crop recommendation"></div>
             <div class="app-preview__panel" id="culvera-demo-panel">
               <div class="demo-panel__state demo-panel__state--empty">
                 <p class="app-preview__group-title">GET STARTED</p>
-                <p>Click anywhere on the map — or one of the province markers — for a live crop
-                recommendation at that location.</p>
+                <p>Click anywhere on the map — or one of the province markers — for a real crop
+                recommendation at your nearest supported province.</p>
               </div>
             </div>
           </div>
