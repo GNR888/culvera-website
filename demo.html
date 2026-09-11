@@ -25,6 +25,18 @@
   <link rel="stylesheet" href="css/about-sections.css" />
   <link rel="stylesheet" href="css/site-sections.css" />
   <link rel="stylesheet" href="css/modal.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script>
+    // Points the live demo at the Agri-Sense backend. Update this once the
+    // service is deployed (Railway — see Agri-Sense/CLAUDE.md) and add this
+    // site's origin to that service's CORS_ORIGINS.
+    window.CULVERA_API_BASE = "http://localhost:8001";
+  </script>
 </head>
 <body class="contact-page">
 
@@ -140,7 +152,7 @@
       </div>
 
       <div class="app-preview" data-reveal>
-        <p class="app-preview__label">Example preview, illustrative only. Not live prototype data.</p>
+        <p class="app-preview__label">Live from the Agri-Sense backend — click anywhere on the map.</p>
         <div class="app-preview__window">
           <div class="app-preview__titlebar">
             <span class="app-preview__dot"></span>
@@ -148,35 +160,12 @@
             <span class="app-preview__dot"></span>
           </div>
           <div class="app-preview__body">
-            <div class="app-preview__map media-frame" role="img" aria-label="Placeholder for an interactive Vietnam map showing a selected farm location">
-              <span class="media-frame__label">Interactive map preview<br />to be added</span>
-            </div>
-            <div class="app-preview__panel">
-              <div>
-                <p class="app-preview__group-title">SELECTED LOCATION</p>
-                <div class="app-preview__row"><span class="app-preview__row-label">Location</span><span>Example location, Mekong Delta</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Season</span><span>Example season</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Soil summary</span><span>Example soil profile</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Climate summary</span><span>Example climate profile</span></div>
-              </div>
-
-              <div class="app-preview__recommendation">
-                <p class="app-preview__group-title">TOP RECOMMENDATION</p>
-                <h3 class="app-preview__recommendation-title">Example crop</h3>
-                <p class="app-preview__recommendation-sub">Illustrative example, not a live result</p>
-                <div class="app-preview__row"><span class="app-preview__row-label">Suitability</span><span>Example range</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Expected yield</span><span>Example range</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Confidence / risk</span><span>Example indicator</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Soil considerations</span><span>Example note</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Weather considerations</span><span>Example note</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Suggested next step</span><span>Example guidance</span></div>
-              </div>
-
-              <div>
-                <p class="app-preview__group-title">ALSO INCLUDED</p>
-                <div class="app-preview__row"><span class="app-preview__row-label">Market context</span><span>Example</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Harvest window</span><span>Example</span></div>
-                <div class="app-preview__row"><span class="app-preview__row-label">Input guidance</span><span>Example</span></div>
+            <div class="app-preview__map" id="culvera-demo-map" role="application" aria-label="Interactive map of Vietnam — click a location for a live crop recommendation"></div>
+            <div class="app-preview__panel" id="culvera-demo-panel">
+              <div class="demo-panel__state demo-panel__state--empty">
+                <p class="app-preview__group-title">GET STARTED</p>
+                <p>Click anywhere on the map — or one of the province markers — for a live crop
+                recommendation at that location.</p>
               </div>
             </div>
           </div>
@@ -291,5 +280,6 @@
   <script type="module" src="js/demo-access.js"></script>
   <script type="module" src="js/footer.js"></script>
   <script type="module" src="js/scroll-reveal.js"></script>
+  <script type="module" src="js/demo-map.js"></script>
 </body>
 </html>
