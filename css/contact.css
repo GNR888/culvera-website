@@ -1,0 +1,575 @@
+/* ==========================================================================
+   Culvera AI — Contact page
+   --------------------------------------------------------------------------
+   Warm Ivory ground, Deep Navy typography, Field Green as a secondary
+   accent, gold reserved for small details (eyebrow, focus rings, markers).
+   Restrained: thin dividers, understated inputs, no cards, no gradients.
+   ========================================================================== */
+
+body.contact-page {
+  background: var(--color-ivory);
+  color: var(--color-navy);
+}
+
+.contact-page main {
+  padding-top: var(--header-height);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Static header variant — same markup/classes as the hero header, just   */
+/* always visible and recoloured for a light, non-video background.        */
+/* (hero.css is left untouched; this is additive, page-scoped.)            */
+/* ---------------------------------------------------------------------- */
+
+.site-header--static {
+  position: sticky;
+  background: rgba(245, 241, 232, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(30, 42, 53, 0.08);
+  /* hero.css defaults .site-header to pointer-events: none and only
+     re-enables it for body[data-hero-stage="header"|"done"] — which only
+     ever exists on index.html. Every page using this static variant needs
+     its own override, or the header is genuinely unclickable. */
+  pointer-events: auto;
+}
+
+.site-header--static .site-header__brand,
+.site-header--static .site-header__nav {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.site-header--static .site-header__wordmark {
+  color: var(--color-navy);
+}
+
+.site-header--static .site-header__nav a {
+  color: var(--color-navy);
+  opacity: 1;
+}
+
+.site-header--static .site-header__nav a:hover,
+.site-header--static .site-header__nav a:focus-visible {
+  color: var(--color-field-green-deep);
+}
+
+.site-header--static .site-header__nav a[aria-current="page"] {
+  color: var(--color-gold);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Section shell                                                           */
+/* ---------------------------------------------------------------------- */
+
+.contact-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ---------------------------------------------------------------------- */
+/* About page — full-bleed photo hero with overlaid text                   */
+/* ---------------------------------------------------------------------- */
+
+.about-photo-hero {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.about-photo-hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.about-photo-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-photo-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 32, 51, 0.75) 0%,
+    rgba(14, 32, 51, 0.4) 45%,
+    rgba(14, 32, 51, 0.75) 100%
+  );
+}
+
+.about-photo-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 66rem;
+  text-align: center;
+  padding: clamp(6rem, 12vw, 9rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.about-photo-hero__eyebrow {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: var(--nav-tracking);
+  color: var(--color-gold-bright);
+  margin: 0 0 1.25rem;
+}
+
+.about-photo-hero__title {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+  line-height: 1.15;
+  color: var(--color-ivory);
+  margin: 0 0 1.5rem;
+}
+
+.about-photo-hero__body {
+  font-family: var(--font-nav);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-ivory);
+  opacity: 0.92;
+  margin: 0 auto 1.25rem;
+  max-width: 46rem;
+}
+
+.about-photo-hero__body:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Contact hero / editorial intro                                          */
+/* ---------------------------------------------------------------------- */
+
+.contact-hero {
+  padding-top: clamp(4.5rem, 9vw, 7rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.contact-hero__inner {
+  max-width: 66rem;
+  margin: 0 auto;
+}
+
+.contact-hero__eyebrow {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: var(--nav-tracking);
+  color: var(--color-gold);
+  margin: 0 0 1.25rem;
+}
+
+.contact-hero__title {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4.8vw, 3.4rem);
+  line-height: 1.15;
+  color: var(--color-navy);
+  margin: 0 0 1.5rem;
+}
+
+/* Contact page heading — sized/widened to stay on one line on any screen
+   roomy enough for a heading this size at all; still wraps gracefully on
+   the smallest phones rather than overflowing. */
+.contact-hero__title--nowrap {
+  font-size: clamp(1.5rem, 4.4vw, 2.9rem);
+}
+
+.contact-hero__inner--wide {
+  max-width: 54rem;
+}
+
+@media (min-width: 540px) {
+  .contact-hero__title--nowrap {
+    white-space: nowrap;
+  }
+}
+
+.contact-hero__body {
+  font-family: var(--font-nav);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.82;
+  margin: 0 auto;
+  max-width: 46rem;
+}
+
+.contact-hero__links {
+  font-family: var(--font-nav);
+  font-size: 0.92rem;
+  color: var(--color-navy);
+  opacity: 0.75;
+  margin: 1.75rem 0 0;
+}
+
+.contact-hero__links a {
+  color: var(--color-field-green-deep);
+  text-underline-offset: 3px;
+  text-decoration: underline;
+  text-decoration-color: rgba(89, 120, 90, 0.35);
+}
+
+.contact-hero__links a:hover,
+.contact-hero__links a:focus-visible {
+  color: var(--color-gold);
+  text-decoration-color: currentColor;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Contact info + form — two columns                                       */
+/* ---------------------------------------------------------------------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
+  align-items: start;
+}
+
+.contact-info__heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  color: var(--color-navy);
+  margin: 0 0 1rem;
+}
+
+.contact-info__body {
+  font-family: var(--font-nav);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.82;
+  margin: 0 0 2.25rem;
+  max-width: 34rem;
+}
+
+.contact-info__list {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.contact-info__list dt {
+  font-family: var(--font-nav);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-field-green-deep);
+  margin: 0 0 0.3rem;
+}
+
+.contact-info__list dd {
+  font-family: var(--font-nav);
+  font-size: 1.02rem;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.contact-info__list a {
+  color: var(--color-navy);
+  border-bottom: 1px solid rgba(30, 42, 53, 0.25);
+  transition: color 220ms var(--ease-out-cinematic), border-color 220ms var(--ease-out-cinematic);
+}
+
+.contact-info__list a:hover,
+.contact-info__list a:focus-visible {
+  color: var(--color-gold);
+  border-color: currentColor;
+}
+
+.contact-info__note {
+  font-family: var(--font-nav);
+  font-size: 0.85rem;
+  color: var(--color-navy);
+  opacity: 0.6;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(30, 42, 53, 0.12);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Form                                                                    */
+/* ---------------------------------------------------------------------- */
+
+.contact-form {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-navy);
+}
+
+.form-field .form-field__optional {
+  font-weight: 400;
+  opacity: 0.55;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-nav);
+  font-size: 0.98rem;
+  color: var(--color-navy);
+  background: transparent;
+  border: 1px solid rgba(30, 42, 53, 0.28);
+  border-radius: 4px;
+  padding: 0.75rem 0.9rem;
+  transition: border-color 200ms var(--ease-out-cinematic), box-shadow 200ms var(--ease-out-cinematic);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 8.5rem;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(30, 42, 53, 0.4);
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: rgba(30, 42, 53, 0.45);
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(205, 164, 94, 0.18);
+}
+
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+  border-color: #b0453a;
+}
+
+.form-field__error {
+  min-height: 1.1em;
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  color: #b0453a;
+}
+
+.contact-form__submit {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.contact-form__button {
+  font-family: var(--font-nav);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ivory);
+  background: var(--color-navy);
+  border: none;
+  border-radius: 4px;
+  padding: 0.95rem 2.1rem;
+  cursor: pointer;
+  transition: background var(--hover-duration) var(--ease-out-cinematic), transform var(--hover-duration) var(--ease-out-cinematic), box-shadow var(--hover-duration) var(--ease-out-cinematic);
+}
+
+.contact-form__button:hover,
+.contact-form__button:focus-visible {
+  background: var(--color-field-green-deep);
+  transform: translateY(var(--hover-lift));
+  box-shadow: 0 14px 28px -18px rgba(20, 46, 70, 0.5);
+}
+
+.contact-form__button:active {
+  transform: translateY(calc(var(--hover-lift) * 0.35));
+  transition-duration: var(--press-duration);
+}
+
+.contact-form__button:disabled {
+  cursor: progress;
+  opacity: 0.75;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-form__status {
+  font-family: var(--font-nav);
+  font-size: 0.88rem;
+  min-height: 1.4em;
+}
+
+.contact-form__status[data-tone="success"] {
+  color: var(--color-field-green-deep);
+}
+
+.contact-form__status[data-tone="error"] {
+  color: #b0453a;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* FAQ                                                                     */
+/* ---------------------------------------------------------------------- */
+
+.faq-section {
+  border-top: 1px solid rgba(30, 42, 53, 0.12);
+}
+
+.faq-section__heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--color-navy);
+  margin: 0 0 0.85rem;
+  text-align: center;
+}
+
+.faq-section__intro {
+  font-family: var(--font-nav);
+  font-size: 1rem;
+  color: var(--color-navy);
+  opacity: 0.78;
+  text-align: center;
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+}
+
+.faq-list {
+  max-width: 48rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(30, 42, 53, 0.14);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.35rem 0.15rem;
+  border-radius: 4px;
+  transition: padding-left var(--hover-duration) var(--ease-out-cinematic), background var(--hover-duration) var(--ease-out-cinematic);
+}
+
+.faq-item summary:hover,
+.faq-item summary:focus-visible {
+  padding-left: 0.6rem;
+  background: rgba(197, 160, 82, 0.06);
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: -2px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary h3 {
+  font-family: var(--font-nav);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.faq-item__icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+}
+
+.faq-item__icon::before,
+.faq-item__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--color-gold);
+  border-radius: 1px;
+  transition: transform 260ms var(--ease-in-out-cinematic);
+}
+
+.faq-item__icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  transform: translateY(-50%);
+}
+
+.faq-item__icon::after {
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1.5px;
+  transform: translateX(-50%);
+}
+
+.faq-item[open] .faq-item__icon::after {
+  transform: translateX(-50%) rotate(90deg) scaleY(0);
+}
+
+.faq-item__answer p {
+  font-family: var(--font-nav);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.82;
+  margin: 0;
+  padding: 0 0.15rem 1.5rem;
+  max-width: 48rem;
+}

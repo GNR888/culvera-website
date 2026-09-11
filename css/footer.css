@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Culvera AI — Global Footer
+   --------------------------------------------------------------------------
+   Rendered by js/footer.js from js/footer-data.js into <footer id="site-footer">.
+   Field Green background, Warm Ivory text, gold reserved for small accents
+   and hover states only — restrained, editorial, not a generic SaaS footer.
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-field-green);
+  color: var(--color-ivory);
+}
+
+.site-footer__inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 7vw, 5.5rem) clamp(1.5rem, 4vw, 3rem) clamp(2rem, 4vw, 2.75rem);
+}
+
+.site-footer__top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Brand column                                                            */
+/* ---------------------------------------------------------------------- */
+
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+.site-footer__logo {
+  width: 30px;
+  height: 30px;
+}
+
+.site-footer__wordmark {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 1.05rem;
+  letter-spacing: 0.2em;
+  color: var(--color-ivory);
+}
+
+.site-footer__tagline {
+  font-family: var(--font-nav);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-ivory);
+  max-width: 26ch;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Link columns                                                            */
+/* ---------------------------------------------------------------------- */
+
+.site-footer__heading {
+  font-family: var(--font-nav);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  margin: 0 0 1.15rem;
+}
+
+.site-footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.site-footer__list a,
+.site-footer__list li {
+  font-family: var(--font-nav);
+  font-size: 0.9rem;
+  color: var(--color-ivory);
+}
+
+.site-footer__list a {
+  transition: color 220ms var(--ease-out-cinematic);
+}
+
+.site-footer__list a:hover,
+.site-footer__list a:focus-visible {
+  color: var(--color-gold-bright);
+}
+
+.site-footer__col--contact .site-footer__list li {
+  opacity: 0.95;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Divider + bottom bar                                                    */
+/* ---------------------------------------------------------------------- */
+
+.site-footer__divider {
+  height: 1px;
+  background: var(--color-ivory-dim);
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 1.75rem;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-footer__copyright {
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  color: var(--color-ivory);
+  margin: 0;
+}
+
+.site-footer__legal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-footer__legal a {
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  color: var(--color-ivory);
+  transition: color 220ms var(--ease-out-cinematic);
+}
+
+.site-footer__legal a:hover,
+.site-footer__legal a:focus-visible {
+  color: var(--color-gold-bright);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Responsive                                                              */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .site-footer__top {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.75rem;
+  }
+  .site-footer__col--brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

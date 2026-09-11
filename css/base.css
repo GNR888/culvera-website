@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Culvera AI — Base / Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-black);
+  color: var(--color-ink);
+  font-family: var(--font-nav);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Visually-hidden but still available to assistive tech */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   Scroll reveal (sitewide)
+   --------------------------------------------------------------------------
+   js/scroll-reveal.js adds .is-visible the first time a [data-reveal]
+   element enters the viewport. A [data-reveal-group] wrapper staggers its
+   children via --reveal-index, which the script sets per child. Timing
+   lives in css/variables.css (collapsed to ~0 under reduced motion, so this
+   degrades to "just visible" rather than skipped/broken).
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+  transition:
+    opacity var(--reveal-duration) var(--ease-out-cinematic),
+    transform var(--reveal-duration) var(--ease-out-cinematic);
+  transition-delay: calc(var(--reveal-index, 0) * var(--reveal-stagger-step));
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Photography gets a touch more presence on the way in — a gentle settle
+   rather than the plain rise used for text/cards. */
+[data-reveal="media"] {
+  transform: translateY(calc(var(--reveal-distance) * 0.6)) scale(1.035);
+}

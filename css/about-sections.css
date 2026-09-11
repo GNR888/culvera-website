@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Culvera AI — "About the company" sections
+   --------------------------------------------------------------------------
+   Shared by the homepage (directly below the hero) and the About page.
+   Rendered by js/components/why-culvera.js, why-vietnam.js, goals-section.js,
+   tech-statement.js and founder-grid.js from js/data/*.js.
+
+   Warm Ivory throughout, Deep Navy for type, Field Green + Gold reserved
+   for small accents. No cards, no gradients — rhythm comes from generous
+   spacing, a consistent content width, and thin dividers between sections.
+   ========================================================================== */
+
+.why-culvera-section,
+.why-vietnam-section,
+.goals-section,
+.tech-statement,
+.founders-section {
+  background: var(--color-ivory);
+}
+
+.section-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 4vw, 3rem);
+  padding-right: clamp(1.5rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: var(--nav-tracking);
+  color: var(--color-gold);
+  margin: 0 0 1.25rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Why Culvera — centered editorial intro                                  */
+/* ---------------------------------------------------------------------- */
+
+.why-culvera-section {
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6rem);
+  text-align: center;
+}
+
+.why-culvera__inner {
+  max-width: 54rem;
+}
+
+.why-culvera-section .eyebrow {
+  text-align: center;
+}
+
+.why-culvera__heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.2;
+  color: var(--color-navy);
+  margin: 0 0 2.25rem;
+}
+
+.why-culvera__body {
+  display: grid;
+  gap: 1.4rem;
+  text-align: left;
+}
+
+.why-culvera__body p {
+  font-family: var(--font-nav);
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-navy);
+  opacity: 0.82;
+  margin: 0;
+}
+
+/* Make Culvera's short standalone line ("...help close that gap.") read as
+   its own beat rather than blending into the paragraph above/below it. */
+.why-culvera__body p:nth-child(2) {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-field-green-deep);
+  opacity: 1;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Why Vietnam — full-width heading, small photo left / centered copy right */
+/* ---------------------------------------------------------------------- */
+
+.why-vietnam-section {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  border-top: 1px solid rgba(30, 42, 53, 0.1);
+}
+
+/* Sized to its content (fixed photo width + a capped text width) rather
+   than stretched across the full section, then centered as one block —
+   that's what keeps the gap from the left screen edge to the photo equal
+   to the gap from the right screen edge to the text, instead of the text
+   column stretching to fill leftover space on one side only. */
+.why-vietnam__grid {
+  display: grid;
+  grid-template-columns: 16rem minmax(0, 48rem);
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+  margin-top: clamp(2rem, 5vw, 3rem);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-vietnam__heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--color-navy);
+  margin: 0 auto;
+  max-width: 44rem;
+  text-align: center;
+}
+
+/* Small, uncropped photo — kept at its natural portrait shape and its own
+   natural height rather than stretched to match the text column. */
+.why-vietnam__media {
+  margin: 0;
+}
+
+.why-vietnam__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.why-vietnam__body {
+  display: grid;
+  gap: 1.4rem;
+  text-align: left;
+}
+
+.why-vietnam__body p {
+  font-family: var(--font-nav);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-navy);
+  opacity: 0.82;
+  margin: 0;
+  max-width: 48rem;
+}
+
+@media (max-width: 800px) {
+  .why-vietnam__grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .why-vietnam__media {
+    max-width: 16rem;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Our Goal                                                                 */
+/* ---------------------------------------------------------------------- */
+
+.goals-section {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  border-top: 1px solid rgba(30, 42, 53, 0.1);
+}
+
+.goals__intro {
+  text-align: center;
+  max-width: 48rem;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.goals-section .eyebrow {
+  text-align: center;
+}
+
+.goals__statement {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.25;
+  color: var(--color-navy);
+  margin: 0;
+}
+
+.goals__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.goal {
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--color-gold);
+}
+
+.goal__index {
+  display: block;
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-field-green-deep);
+  margin-bottom: 0.85rem;
+}
+
+.goal__title {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 1.3rem;
+  color: var(--color-navy);
+  margin: 0 0 0.75rem;
+}
+
+.goal__body {
+  font-family: var(--font-nav);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .goals__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Technology statement — one restrained line                              */
+/* ---------------------------------------------------------------------- */
+
+.tech-statement {
+  padding: clamp(2.75rem, 5vw, 3.75rem) 0;
+  text-align: center;
+}
+
+.tech-statement__text {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-nav);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-field-green-deep);
+  margin: 0;
+  padding-top: 1.75rem;
+}
+
+.tech-statement__text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 2px;
+  background: var(--color-gold);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Meet our founders                                                        */
+/* ---------------------------------------------------------------------- */
+
+.founders-section {
+  padding: clamp(4rem, 8vw, 6rem) 0 clamp(5rem, 10vw, 7.5rem);
+  border-top: 1px solid rgba(30, 42, 53, 0.1);
+}
+
+.founders__intro {
+  text-align: center;
+  max-width: 46rem;
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+}
+
+.founders-section .eyebrow {
+  text-align: center;
+}
+
+.founders__heading {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  color: var(--color-navy);
+  margin: 0 0 1rem;
+}
+
+.founders__lede {
+  font-family: var(--font-nav);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.founders__grid {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2.5rem, 4vw, 3rem);
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-card__photo-frame {
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.founder-card__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  transition: transform 480ms var(--ease-out-cinematic);
+}
+
+.founder-card:hover .founder-card__photo,
+.founder-card:focus-within .founder-card__photo {
+  transform: scale(1.05);
+}
+
+.founder-card__photo--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-neutral-warm);
+}
+
+.founder-card__photo--placeholder span {
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(30, 42, 53, 0.45);
+}
+
+.founder-card__name {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--color-navy);
+  text-align: center;
+  margin: 0 0 0.85rem;
+}
+
+.founder-card__bio {
+  font-family: var(--font-nav);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-navy);
+  opacity: 0.78;
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .founders__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 26rem;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* About page — minimal editorial intro (reuses .contact-hero visual       */
+/* language from css/contact.css, which about.html also links)             */
+/* ---------------------------------------------------------------------- */
+
+.about-hero {
+  padding-top: clamp(4.5rem, 9vw, 7rem);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Homepage-only: header recolours once scrolled past the hero onto the    */
+/* Warm Ivory content below (see js/header-scroll-mode.js). The header's   */
+/* own visibility/opacity is still governed entirely by [data-hero-stage]  */
+/* in hero.css — this only ever changes its colour scheme.                 */
+/* ---------------------------------------------------------------------- */
+
+.site-header {
+  transition: background 260ms var(--ease-out-cinematic), box-shadow 260ms var(--ease-out-cinematic), border-color 260ms var(--ease-out-cinematic);
+}
+
+body[data-header-mode="light"] .site-header {
+  background: rgba(245, 241, 232, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(30, 42, 53, 0.08);
+  box-shadow: 0 8px 24px -18px rgba(20, 46, 70, 0.35);
+}
+
+body[data-header-mode="light"] .site-header__wordmark {
+  color: var(--color-navy);
+}
+
+body[data-header-mode="light"] .site-header__nav a {
+  color: var(--color-navy);
+}
+
+body[data-header-mode="light"] .site-header__nav a:hover,
+body[data-header-mode="light"] .site-header__nav a:focus-visible {
+  color: var(--color-field-green-deep);
+}

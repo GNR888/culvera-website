@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Culvera AI — Design Tokens & Animation Constants
+   --------------------------------------------------------------------------
+   Every colour, easing curve and timing value used by the hero/header intro
+   lives here. Nothing below is hard-coded elsewhere — tweak a number in this
+   file and the whole sequence retimes itself (hero.js reads these at runtime
+   via getComputedStyle, so JS and CSS never fall out of sync).
+   ========================================================================== */
+
+:root {
+  /* ---------- Brand palette ---------- */
+  --color-gold: #c5a052;
+  --color-gold-bright: #d9bc80;
+  --color-turquoise: #48c6c2;
+  --color-sand: #ded5c4;
+  --color-charcoal: #263238;
+  --color-black: #0b0b0a;
+  --color-ink: #14130f;
+
+  /* Extended palette — footer, interior pages (contact, about, etc.) */
+  --color-navy: #142e46;
+  --color-navy-deep: #0e2033;
+  --color-field-green: #59785a;
+  --color-field-green-deep: #46603f;
+  --color-ivory: #f5f1e8;
+  --color-ivory-dim: rgba(245, 241, 232, 0.55); /* decorative use only — never body text */
+  --color-neutral-warm: #e3dac6; /* muted warm neutral — image/photo placeholders only */
+
+  /* ---------- Typography ----------
+     Headings: Montserrat Light everywhere (brand wordmark included).
+     Body/nav/UI text: Inter. */
+  --font-heading: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-nav: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --wordmark-tracking: 0.28em;
+  --nav-tracking: 0.18em;
+
+  /* ---------- Easing ----------
+     Cinematic, non-bouncy curves only. */
+  --ease-out-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-cinematic: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ---------- Hero intro timeline ----------
+     Every phase below is expressed as a duration. hero.js sums these to
+     schedule the sequence, so reordering/retiming the show only ever
+     requires editing values here. */
+
+  /* Phase 1 — centered gold logo.
+     Three distinct, independently-tunable sizes rather than one scale plus
+     a derived multiplier, so "how small it starts", "how big it sits while
+     visible", and "how big it grows before dissolving" can each be tuned
+     on their own: */
+  --hero-logo-fade-in: 1400ms;
+  --hero-logo-hold: 850ms;
+  --hero-logo-fade-out: 900ms;
+  --hero-logo-scale-from: 0.28; /* initial, near-invisible size */
+  --hero-logo-scale-to: 0.8; /* size while fully visible / holding */
+  --hero-logo-scale-exit: 1.1; /* continues growing into this as it fades out */
+
+  /* Phase 2 — "CULVERA AI" wordmark, gold -> white */
+  --hero-wordmark-fade-in: 1100ms;
+  --hero-wordmark-color-shift: 1300ms;
+  --hero-wordmark-hold: 750ms;
+  --hero-wordmark-scale-from: 0.92;
+  --hero-wordmark-scale-to: 1;
+
+  /* Phase 2b — tagline ("Farming intelligence for the decisions that
+     matter."), same centered spot, fades in as the wordmark fades out */
+  --hero-tagline-fade-in: 1000ms;
+  --hero-tagline-hold: 900ms;
+
+  /* Phase 3 — collapse into the permanent header */
+  --hero-header-transition: 950ms;
+
+  /* Misc */
+  --hero-scrim-opacity: 0.28;
+  --header-height: 88px;
+  --auto-scroll-duration: 1100ms;
+
+  /* ---------- Scroll-reveal + interaction motion ----------
+     Shared by the [data-reveal] system (js/scroll-reveal.js) and every
+     hover/press micro-interaction sitewide, so retiming the whole site's
+     "feel" is still a matter of editing values here, not hunting through
+     every CSS file. */
+  --reveal-duration: 800ms;
+  --reveal-distance: 22px;
+  --reveal-stagger-step: 90ms;
+  --hover-lift: -4px;
+  --hover-duration: 320ms;
+  --press-duration: 120ms;
+}
+
+/* Reduced-motion overrides: same structural sequence, none of the scale/
+   glow drama, no forced auto-scroll. hero.js also reads this media query
+   directly for the auto-scroll / scale-transform behaviour it controls
+   in JS rather than CSS. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --hero-logo-fade-in: 500ms;
+    --hero-logo-hold: 300ms;
+    --hero-logo-fade-out: 400ms;
+    --hero-logo-scale-from: 1;
+    --hero-logo-scale-to: 1;
+    --hero-logo-scale-exit: 1;
+
+    --hero-wordmark-fade-in: 450ms;
+    --hero-wordmark-color-shift: 500ms;
+    --hero-wordmark-hold: 300ms;
+    --hero-wordmark-scale-from: 1;
+    --hero-wordmark-scale-to: 1;
+
+    --hero-tagline-fade-in: 400ms;
+    --hero-tagline-hold: 300ms;
+
+    --hero-header-transition: 400ms;
+
+    --reveal-duration: 1ms;
+    --reveal-distance: 0px;
+    --reveal-stagger-step: 0ms;
+    --hover-lift: 0px;
+  }
+}

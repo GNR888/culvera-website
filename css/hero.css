@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Culvera AI — Hero / Header Intro
+   --------------------------------------------------------------------------
+   Visual states are driven entirely by a single attribute, [data-hero-stage],
+   set on <body> by js/hero.js. Nothing here animates on its own timer — CSS
+   only reacts to the current stage, so the whole show can be re-sequenced
+   from hero.js without ever touching this file.
+
+   Stages, in order:
+     initial        -> nothing but video is visible
+     logo           -> centered gold logo fades/scales in, then holds
+     logo-out       -> logo fades out (continues a slight scale-up)
+     wordmark-gold  -> "CULVERA AI" fades in, centered, in brand gold
+     wordmark-white -> wordmark shifts colour from gold to white, then holds
+     tagline        -> wordmark fades out; the tagline fades in, centered
+     header         -> tagline fades out; header brand + nav fade in
+     done           -> resting state, identical visually to "header"
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------- */
+/* Hero section                                                            */
+/* ---------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--color-black);
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+/* Soft gradient so the centered wordmark / header stay legible over bright
+   footage. Kept subtle — this is not meant to darken the video materially. */
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, calc(var(--hero-scrim-opacity) * 0.9)) 0%,
+    rgba(0, 0, 0, calc(var(--hero-scrim-opacity) * 0.35)) 28%,
+    rgba(0, 0, 0, calc(var(--hero-scrim-opacity) * 0.35)) 72%,
+    rgba(0, 0, 0, calc(var(--hero-scrim-opacity) * 0.9)) 100%
+  );
+}
+
+/* ---------------------------------------------------------------------- */
+/* Centerstage: logo + wordmark share one dead-center anchor point         */
+/* ---------------------------------------------------------------------- */
+
+.hero__centerstage {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero__logo,
+.hero__wordmark,
+.hero__tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  will-change: opacity, transform;
+}
+
+.hero__logo {
+  width: min(22vw, 180px);
+  min-width: 96px;
+  transform: translate(-50%, -50%) scale(var(--hero-logo-scale-from));
+  opacity: 0;
+  transition:
+    opacity var(--hero-logo-fade-out) var(--ease-out-cinematic),
+    transform var(--hero-logo-fade-out) var(--ease-out-cinematic);
+}
+
+body[data-hero-stage="logo"] .hero__logo {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(var(--hero-logo-scale-to));
+  transition:
+    opacity var(--hero-logo-fade-in) var(--ease-out-cinematic),
+    transform var(--hero-logo-fade-in) var(--ease-out-cinematic);
+}
+
+/* logo-out and every stage after it: hidden, having drifted slightly larger */
+body[data-hero-stage="logo-out"] .hero__logo,
+body[data-hero-stage="wordmark-gold"] .hero__logo,
+body[data-hero-stage="wordmark-white"] .hero__logo,
+body[data-hero-stage="header"] .hero__logo,
+body[data-hero-stage="done"] .hero__logo {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(var(--hero-logo-scale-exit));
+}
+
+.hero__wordmark {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(2.1rem, 5.5vw, 4.25rem);
+  letter-spacing: var(--wordmark-tracking);
+  white-space: nowrap;
+  color: var(--color-gold);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(var(--hero-wordmark-scale-from));
+  transition:
+    opacity var(--hero-header-transition) var(--ease-out-cinematic),
+    transform var(--hero-header-transition) var(--ease-out-cinematic),
+    color var(--hero-wordmark-color-shift) var(--ease-in-out-cinematic);
+}
+
+body[data-hero-stage="wordmark-gold"] .hero__wordmark {
+  opacity: 1;
+  color: var(--color-gold);
+  transform: translate(-50%, -50%) scale(var(--hero-wordmark-scale-to));
+  transition:
+    opacity var(--hero-wordmark-fade-in) var(--ease-out-cinematic),
+    transform var(--hero-wordmark-fade-in) var(--ease-out-cinematic);
+}
+
+body[data-hero-stage="wordmark-white"] .hero__wordmark {
+  opacity: 1;
+  color: var(--color-ivory);
+  transform: translate(-50%, -50%) scale(var(--hero-wordmark-scale-to));
+  transition: color var(--hero-wordmark-color-shift) var(--ease-in-out-cinematic);
+}
+
+/* tagline and every stage after it: wordmark dissolves back out, mirroring
+   the logo's exit */
+body[data-hero-stage="tagline"] .hero__wordmark,
+body[data-hero-stage="header"] .hero__wordmark,
+body[data-hero-stage="done"] .hero__wordmark {
+  opacity: 0;
+  color: var(--color-ivory);
+  transform: translate(-50%, -50%) scale(calc(var(--hero-wordmark-scale-to) * 1.06));
+  transition:
+    opacity var(--hero-tagline-fade-in) var(--ease-out-cinematic),
+    transform var(--hero-tagline-fade-in) var(--ease-out-cinematic);
+}
+
+/* The tagline shares the wordmark's exact centered spot and fades in as
+   the wordmark fades out. */
+.hero__tagline {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: clamp(1.2rem, 3vw, 1.9rem);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  color: var(--color-ivory);
+  text-align: center;
+  max-width: min(90vw, 40rem);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.97);
+  transition:
+    opacity var(--hero-header-transition) var(--ease-out-cinematic),
+    transform var(--hero-header-transition) var(--ease-out-cinematic);
+}
+
+body[data-hero-stage="tagline"] .hero__tagline {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition:
+    opacity var(--hero-tagline-fade-in) var(--ease-out-cinematic),
+    transform var(--hero-tagline-fade-in) var(--ease-out-cinematic);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Permanent header (brand mark + nav)                                     */
+/* ---------------------------------------------------------------------- */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  background: transparent;
+  pointer-events: none;
+}
+
+.site-header__brand,
+.site-header__nav {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity var(--hero-header-transition) var(--ease-out-cinematic),
+    transform var(--hero-header-transition) var(--ease-out-cinematic);
+}
+
+body[data-hero-stage="header"] .site-header,
+body[data-hero-stage="done"] .site-header {
+  pointer-events: auto;
+}
+
+body[data-hero-stage="header"] .site-header__brand,
+body[data-hero-stage="done"] .site-header__brand {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-hero-stage="header"] .site-header__nav,
+body[data-hero-stage="done"] .site-header__nav {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 120ms; /* nav settles a beat after the brand mark */
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 220ms var(--ease-out-cinematic);
+}
+
+.site-header__brand:hover,
+.site-header__brand:focus-visible {
+  opacity: 0.85;
+}
+
+.site-header__logo {
+  width: 34px;
+  height: 34px;
+}
+
+.site-header__wordmark {
+  font-family: var(--font-heading);
+  font-weight: 300;
+  font-size: 1.15rem;
+  letter-spacing: 0.22em;
+  color: var(--color-ivory);
+  white-space: nowrap;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.site-header__nav a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  font-family: var(--font-nav);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: var(--nav-tracking);
+  color: var(--color-ivory);
+  opacity: 0.9;
+  transition: opacity 220ms var(--ease-out-cinematic);
+}
+
+.site-header__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 280ms var(--ease-out-cinematic);
+}
+
+.site-header__nav a:hover,
+.site-header__nav a:focus-visible {
+  opacity: 1;
+}
+
+.site-header__nav a:hover::after,
+.site-header__nav a:focus-visible::after,
+.site-header__nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 560px) {
+  .site-header__wordmark {
+    font-size: 0.95rem;
+  }
+  .site-header__nav {
+    gap: 1rem;
+  }
+  .site-header__nav a {
+    font-size: 0.68rem;
+  }
+}
+
+/* Below ~480px there isn't room for brand + full nav on one line without
+   crowding or wrapping mid-word — stack into two centered rows instead of
+   shrinking type past legibility. */
+@media (max-width: 480px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.5rem;
+    height: auto;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+
+  .site-header__brand {
+    order: 1;
+  }
+
+  .site-header__nav {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+}
+

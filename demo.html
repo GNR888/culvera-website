@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culvera AI Demo | Agricultural Decision Support</title>
+  <meta
+    name="description"
+    content="See how the Culvera prototype turns a farm location into climate, soil and satellite informed decision support, then request access to the current demo."
+  />
+  <link rel="canonical" href="demo.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/about-sections.css" />
+  <link rel="stylesheet" href="css/site-sections.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+</head>
+<body class="contact-page">
+
+  <header class="site-header site-header--static">
+    <a class="site-header__brand" href="index.html">
+      <img
+        class="site-header__logo"
+        src="assets/images/logo-gold.png"
+        alt=""
+      />
+      <span class="site-header__wordmark">CULVERA AI</span>
+    </a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="demo.html" aria-current="page">DEMO</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================================================================
+         Demo hero — the page's one <h1>.
+         ================================================================ -->
+    <section class="contact-hero about-hero contact-section">
+      <div class="contact-hero__inner">
+        <p class="contact-hero__eyebrow">CULVERA PROTOTYPE</p>
+        <h1 class="contact-hero__title">From a farm location to a decision.</h1>
+        <p class="contact-hero__body">
+          The Culvera prototype brings climate, soil and satellite information together to
+          show how agricultural data can become location specific guidance.
+        </p>
+        <p class="contact-hero__body">
+          Explore the workflow below, preview the interface and request access to the
+          current demo.
+        </p>
+        <p class="contact-hero__links">
+          <a class="site-section__link" href="#workflow">See How It Works &darr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         The Workflow
+         ================================================================ -->
+    <section class="site-section site-section--divider" id="workflow" aria-labelledby="workflow-heading">
+      <div class="site-section__intro site-section__intro--center section-inner" data-reveal>
+        <h2 class="site-section__heading" id="workflow-heading">One location. Multiple signals. One decision layer.</h2>
+      </div>
+
+      <div class="step-pipeline" data-reveal-group>
+        <div class="step">
+          <span class="step__index">01</span>
+          <h3 class="step__title">CHOOSE A LOCATION</h3>
+          <p class="step__body">Select a point on the map or enter a farm location.</p>
+        </div>
+        <div class="step">
+          <span class="step__index">02</span>
+          <h3 class="step__title">CULVERA BUILDS THE CONTEXT</h3>
+          <p class="step__body">The platform retrieves available weather, soil and satellite derived vegetation information for the location and season.</p>
+        </div>
+        <div class="step">
+          <span class="step__index">03</span>
+          <h3 class="step__title">MODELS ANALYSE THE CONDITIONS</h3>
+          <p class="step__body">The prototype evaluates crop suitability, expected yield, seasonal conditions and other relevant agricultural factors.</p>
+        </div>
+        <div class="step">
+          <span class="step__index">04</span>
+          <h3 class="step__title">CULVERA BUILDS THE DECISION PACKAGE</h3>
+          <p class="step__body">The user receives recommendations and planning information rather than having to interpret each dataset independently.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         What can Culvera help answer?
+         ================================================================ -->
+    <section class="site-section site-section--divider site-section--band-light" aria-labelledby="questions-heading">
+      <div class="site-section__intro site-section__intro--center section-inner" data-reveal>
+        <p class="eyebrow">QUESTIONS, NOT DASHBOARDS</p>
+        <h2 class="site-section__heading" id="questions-heading">Start with the decision you need to make.</h2>
+        <p class="site-section__body">Questions Culvera is designed to help answer:</p>
+      </div>
+
+      <ul class="question-list section-inner" data-reveal-group>
+        <li class="question-item">
+          <p class="question-item__text">Which supported crops are best suited to this location this season?</p>
+        </li>
+        <li class="question-item">
+          <p class="question-item__text">How does the soil at this location affect my fertiliser plan?</p>
+        </li>
+        <li class="question-item">
+          <p class="question-item__text">What weather risks should I consider before planting?</p>
+        </li>
+        <li class="question-item">
+          <p class="question-item__text">What yield range should I plan for?</p>
+        </li>
+        <li class="question-item">
+          <p class="question-item__text">When is the safest harvest window?</p>
+        </li>
+        <li class="question-item">
+          <p class="question-item__text">How could I allocate this farm across the strongest crop options?</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================================================================
+         Product preview
+         ================================================================ -->
+    <section class="site-section" aria-labelledby="preview-heading">
+      <div class="site-section__intro site-section__intro--center section-inner" data-reveal>
+        <p class="eyebrow">PREVIEW</p>
+        <h2 class="site-section__heading" id="preview-heading">See the decision layer.</h2>
+      </div>
+
+      <div class="app-preview" data-reveal>
+        <p class="app-preview__label">Example preview, illustrative only. Not live prototype data.</p>
+        <div class="app-preview__window">
+          <div class="app-preview__titlebar">
+            <span class="app-preview__dot"></span>
+            <span class="app-preview__dot"></span>
+            <span class="app-preview__dot"></span>
+          </div>
+          <div class="app-preview__body">
+            <div class="app-preview__map media-frame" role="img" aria-label="Placeholder for an interactive Vietnam map showing a selected farm location">
+              <span class="media-frame__label">Interactive map preview<br />to be added</span>
+            </div>
+            <div class="app-preview__panel">
+              <div>
+                <p class="app-preview__group-title">SELECTED LOCATION</p>
+                <div class="app-preview__row"><span class="app-preview__row-label">Location</span><span>Example location, Mekong Delta</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Season</span><span>Example season</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Soil summary</span><span>Example soil profile</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Climate summary</span><span>Example climate profile</span></div>
+              </div>
+
+              <div class="app-preview__recommendation">
+                <p class="app-preview__group-title">TOP RECOMMENDATION</p>
+                <h3 class="app-preview__recommendation-title">Example crop</h3>
+                <p class="app-preview__recommendation-sub">Illustrative example, not a live result</p>
+                <div class="app-preview__row"><span class="app-preview__row-label">Suitability</span><span>Example range</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Expected yield</span><span>Example range</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Confidence / risk</span><span>Example indicator</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Soil considerations</span><span>Example note</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Weather considerations</span><span>Example note</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Suggested next step</span><span>Example guidance</span></div>
+              </div>
+
+              <div>
+                <p class="app-preview__group-title">ALSO INCLUDED</p>
+                <div class="app-preview__row"><span class="app-preview__row-label">Market context</span><span>Example</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Harvest window</span><span>Example</span></div>
+                <div class="app-preview__row"><span class="app-preview__row-label">Input guidance</span><span>Example</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="app-preview__note">
+          The current Culvera prototype is an early decision support environment and
+          continues to evolve as we add local field data, validation and more specialised
+          agricultural use cases.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Access CTA
+         ================================================================ -->
+    <section class="cta-band site-section">
+      <div class="cta-band__inner" data-reveal>
+        <h2 class="cta-band__heading">Ready to explore the prototype?</h2>
+        <p class="cta-band__body">Request access to the current Culvera demo.</p>
+        <div class="cta-band__actions">
+          <button type="button" class="button button--primary" data-modal-trigger="demo-access">Access Demo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Disclaimer — small and unobtrusive, on its own
+         ================================================================ -->
+    <section class="site-section site-section--tight">
+      <p class="disclaimer-note">
+        Culvera provides decision support and research stage agricultural guidance. Outputs
+        should be interpreted alongside local agronomic expertise, field observations and,
+        where relevant, laboratory testing.
+      </p>
+    </section>
+
+    <!-- ================================================================
+         Inside the prototype — always visible, its own section
+         ================================================================ -->
+    <section class="site-section site-section--divider" aria-labelledby="prototype-heading">
+      <div class="site-section__intro site-section__intro--center section-inner" data-reveal>
+        <p class="eyebrow">THE TECHNOLOGY</p>
+        <h2 class="site-section__heading" id="prototype-heading">Inside the prototype</h2>
+        <p class="site-section__body">
+          The current Culvera prototype connects multiple public agricultural and
+          environmental data sources into a single analysis pipeline.
+        </p>
+      </div>
+
+      <div class="prototype-details" data-reveal>
+        <div class="prototype-details__body">
+          <div class="prototype-details__item">
+            <p class="prototype-details__item-title">NASA POWER</p>
+            <p class="prototype-details__item-body">Daily weather and climate variables.</p>
+          </div>
+          <div class="prototype-details__item">
+            <p class="prototype-details__item-title">SOILGRIDS</p>
+            <p class="prototype-details__item-body">Location specific soil characteristics including pH, nitrogen, organic carbon and texture.</p>
+          </div>
+          <div class="prototype-details__item">
+            <p class="prototype-details__item-title">SENTINEL2</p>
+            <p class="prototype-details__item-body">Satellite imagery used to derive vegetation health signals such as NDVI.</p>
+          </div>
+          <div class="prototype-details__item">
+            <p class="prototype-details__item-title">MACHINE LEARNING</p>
+            <p class="prototype-details__item-body">Prototype classification and regression models turn these inputs into crop suitability and yield estimates.</p>
+          </div>
+          <div class="prototype-details__item">
+            <p class="prototype-details__item-title">AGRONOMIC LOGIC</p>
+            <p class="prototype-details__item-body">Soil, climate and seasonal conditions are translated into practical planning information.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <!-- ================================================================
+       Access Demo modal (email gate)
+       ================================================================ -->
+  <div class="modal-overlay" data-modal="demo-access" data-open="false" role="dialog" aria-modal="true" aria-labelledby="demo-access-heading">
+    <div class="modal" data-state="idle" tabindex="-1">
+      <button type="button" class="modal__close" data-modal-close aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M20 4L4 20" stroke-linecap="round" /></svg>
+      </button>
+
+      <h2 class="modal__heading" id="demo-access-heading">Access the Culvera Demo</h2>
+      <p class="modal__body">Enter your email to continue to the current prototype.</p>
+
+      <form class="modal__form" data-demo-access-form novalidate>
+        <div class="modal__field">
+          <label for="demo-email">Email address</label>
+          <input type="email" id="demo-email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          <p class="modal__error" data-error-for="email" role="alert"></p>
+        </div>
+
+        <button type="submit" class="button button--dark modal__submit" data-submit-button>
+          <span data-submit-label>Continue to Demo</span>
+        </button>
+
+        <p class="modal__privacy">
+          We'll only use your email to manage demo access and relevant Culvera updates.
+        </p>
+      </form>
+
+      <p class="modal__status" data-form-status role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <script type="module" src="js/modal.js"></script>
+  <script type="module" src="js/demo-access.js"></script>
+  <script type="module" src="js/footer.js"></script>
+  <script type="module" src="js/scroll-reveal.js"></script>
+</body>
+</html>
