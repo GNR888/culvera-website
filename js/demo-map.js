@@ -2,18 +2,18 @@
  * Culvera AI — Demo: interactive Vietnam map + crop recommendation
  * ----------------------------------------------------------------------
  * Renders a Leaflet map into #culvera-demo-map. The recommendation data
- * is NOT a live backend call — it's real Agri-Sense model output,
+ * is NOT a live backend call — it's real Culvera model output,
  * precomputed once per supported province (top 3 candidate crops each)
  * and bundled as static JSON (data/demo-recommendations.json). A click
  * anywhere snaps to the nearest of those provinces (the same "nearest
  * province" resolution the live backend does internally) and renders
  * its top-3 recommendations, switchable via tabs.
  *
- * Why precomputed: the Agri-Sense FastAPI backend needs a paid host to
+ * Why precomputed: the Culvera FastAPI backend needs a paid host to
  * run continuously (Railway/Render free tiers hit billing or cold-start
  * issues for this project). Baking real model output into the static
  * site avoids hosting it at all. To go live-per-click again later,
- * deploy Agri-Sense and swap fetchRecommendation() back to a
+ * deploy the backend and swap fetchRecommendation() back to a
  * POST /recommend call (see git history for the previous version).
  *
  * The "Farm allocation" stat reuses each crop's `probability` field —
@@ -196,7 +196,6 @@ function buildPanelHtml(data, lat, lon) {
 
         <div class="app-preview__recommendation">
           <h3 class="app-preview__recommendation-title">${cropLabel(rec.crop)}</h3>
-          <p class="app-preview__recommendation-sub">Real Agri-Sense model output for this province — not illustrative.</p>
 
           <div class="demo-stat-row">
             <div class="demo-stat">
@@ -328,8 +327,8 @@ async function loadDataset() {
       `
       <div class="demo-panel__state demo-panel__state--empty">
         <p class="app-preview__group-title">GET STARTED</p>
-        <p>Click anywhere on the map — or one of the province markers — for real Agri-Sense
-        crop recommendations at your nearest supported province.</p>
+        <p>Click anywhere on the map — or one of the province markers — for a crop
+        recommendation at your nearest supported province.</p>
       </div>
     `
     );
@@ -351,7 +350,7 @@ async function loadDataset() {
   }
 }
 
-// Vietnam's bounding box (matches the Agri-Sense backend's own check) —
+// Vietnam's bounding box (matches the Culvera backend's own check) —
 // frames the map tightly on the country instead of showing half of
 // southern China and Cambodia at a loose default zoom.
 const VN_BOUNDS = L.latLngBounds([8.5, 102.0], [23.5, 110.0]);
