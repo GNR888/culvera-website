@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="css/contact.css" />
   <link rel="stylesheet" href="css/about-sections.css" />
   <link rel="stylesheet" href="css/site-sections.css" />
-  <link rel="stylesheet" href="css/modal.css" />
 
   <link
     rel="stylesheet"
@@ -174,7 +173,7 @@
         <h2 class="cta-band__heading">Ready to explore the prototype?</h2>
         <p class="cta-band__body">Request access to the current Culvera demo.</p>
         <div class="cta-band__actions">
-          <button type="button" class="button button--primary" data-modal-trigger="demo-access">Access Demo</button>
+          <a class="button button--primary" href="contact.html">Access Demo</a>
         </div>
       </div>
     </section>
@@ -194,40 +193,6 @@
 
   <footer id="site-footer"></footer>
 
-  <!-- ================================================================
-       Access Demo modal (email gate)
-       ================================================================ -->
-  <div class="modal-overlay" data-modal="demo-access" data-open="false" role="dialog" aria-modal="true" aria-labelledby="demo-access-heading">
-    <div class="modal" data-state="idle" tabindex="-1">
-      <button type="button" class="modal__close" data-modal-close aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4l16 16M20 4L4 20" stroke-linecap="round" /></svg>
-      </button>
-
-      <h2 class="modal__heading" id="demo-access-heading">Access the Culvera Demo</h2>
-      <p class="modal__body">Enter your email to continue to the current prototype.</p>
-
-      <form class="modal__form" data-demo-access-form novalidate>
-        <div class="modal__field">
-          <label for="demo-email">Email address</label>
-          <input type="email" id="demo-email" name="email" placeholder="you@example.com" autocomplete="email" required />
-          <p class="modal__error" data-error-for="email" role="alert"></p>
-        </div>
-
-        <button type="submit" class="button button--dark modal__submit" data-submit-button>
-          <span data-submit-label>Continue to Demo</span>
-        </button>
-
-        <p class="modal__privacy">
-          We'll only use your email to manage demo access and relevant Culvera updates.
-        </p>
-      </form>
-
-      <p class="modal__status" data-form-status role="status" aria-live="polite"></p>
-    </div>
-  </div>
-
-  <script type="module" src="js/modal.js"></script>
-  <script type="module" src="js/demo-access.js"></script>
   <script type="module" src="js/footer.js"></script>
   <script type="module" src="js/scroll-reveal.js"></script>
   <script type="module" src="js/demo-map.js"></script>

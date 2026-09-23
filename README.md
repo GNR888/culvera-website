@@ -63,7 +63,7 @@ Then visit `http://localhost:8000`.
 index.html              Homepage
 about.html              About page (story, mission, Vietnam, women, founders)
 contact.html            Contact page (info + form, FAQ)
-demo.html               Demo marketing page (workflow, preview, access modal)
+demo.html               Demo marketing page (workflow, preview)
 css/
   variables.css           Design tokens (colour + type) + all animation timing
   base.css                Reset/base styles
@@ -78,8 +78,6 @@ css/
                           step pipeline, the field-focus band + risk map,
                           the network diagram, CTA bands, buttons, prompt
                           chips, the app preview mock, disclaimer note
-  modal.css               Generic accessible modal (used by the demo's
-                          email gate)
 js/
   hero.js                 Homepage intro sequencing + video-loop/auto-scroll
   header-scroll-mode.js   Homepage-only header recolour on scroll
@@ -87,8 +85,6 @@ js/
   footer-data.js          All editable footer copy/links
   contact-form.js         Contact form validation + submit lifecycle
   faq-accordion.js        Progressive-enhancement smooth accordion for FAQ
-  modal.js                Generic modal controller (open/close/focus trap/Escape)
-  demo-access.js          The demo's email-gate form logic (see below)
   prompt-chips.js         Demo page's example-question chip interaction
   data/
     founders.js             Founder names/photos/bios
@@ -130,26 +126,12 @@ too — I kept the initial pass to founders since that's where a photo is
 clearly expected; the rest of the page currently relies on typography and
 the built diagrams per the "restrained, not stock-photo-heavy" direction.
 
-## The Demo page's email gate
+## The Demo page's "Access Demo" button
 
-`js/modal.js` is a small generic, accessible modal controller (focus moves
-in on open and back to the trigger on close, Tab/Shift+Tab is trapped
-inside it, Escape closes it). `js/demo-access.js` is the form logic specific
-to the "Access Demo" modal: email-format validation, inline errors,
-duplicate-submit prevention, and loading/success/error states.
-
-**Two things still need your input:**
-
-1. **No backend is wired up.** `submitDemoAccessRequest()` in
-   `demo-access.js` is a placeholder that waits ~700ms and always succeeds —
-   there's a `TODO(backend)` comment marking exactly where to add a real
-   `fetch()` call once there's an endpoint (your own API route, or a form
-   service).
-2. **No live prototype URL is set.** `DEMO_APP_URL` at the top of
-   `demo-access.js` is empty. Once the real prototype has a URL, set it
-   there and a successful email submission will redirect to it
-   automatically after the success message; until then it just shows "You're
-   in. Opening the Culvera prototype..." without navigating anywhere.
+This is a plain link to `contact.html` — there's no email-gate modal
+anymore (an earlier placeholder version, with no backend wired up, was
+removed in favor of routing interested visitors straight to the contact
+form).
 
 The "Questions Culvera is designed to help answer" chips (`js/prompt-chips.js`)
 are explanatory only — there's no conversational/chat interface in the
@@ -193,8 +175,8 @@ skips the forced auto-scroll.
 
 ## Known follow-ups / things I couldn't finish for you
 
-- **No backend for either form** (contact and demo access) — see above.
-- **No live demo URL** — `DEMO_APP_URL` in `demo-access.js` is empty.
+- **Contact form is wired to Netlify Forms** (see `js/contact-form.js`) — no
+  action needed unless the site moves off Netlify.
 - **`assets/video/hero-banner.mp4` is ~40 MB.** Fine for local testing,
   worth compressing before this goes to GitHub:
   `ffmpeg -i hero-banner.mp4 -vcodec h264 -crf 23 -vf scale=1920:-2 hero-banner-compressed.mp4`.
