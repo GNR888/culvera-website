@@ -151,7 +151,20 @@
 
         <div data-reveal>
           <h2 class="visually-hidden">Contact form</h2>
-          <form class="contact-form" data-contact-form novalidate>
+          <form
+            class="contact-form"
+            data-contact-form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="visually-hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+            </p>
+
             <div class="contact-form__row">
               <div class="form-field">
                 <label for="firstName">First Name</label>

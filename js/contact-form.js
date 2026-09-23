@@ -6,11 +6,11 @@
  * error text, a live region for the overall submit status, focus
  * management).
  *
- * No backend is configured yet. `submitInquiry()` is the single seam to
- * change when one exists — swap its body for a real `fetch(...)` call to
- * an API route or a form service (Formspree, Netlify Forms, etc.). Every
- * other piece of this file is written to not care how submission actually
- * happens.
+ * Submits to Netlify Forms (the <form> in contact.html carries
+ * data-netlify="true" and a matching form-name field, which is how
+ * Netlify's build-time scan registers it). Because we intercept submit
+ * with preventDefault() for the loading/success UI, Netlify never sees a
+ * native form POST — submitInquiry() replicates it manually via fetch.
  */
 
 const REQUIRED_FIELDS = ["firstName", "lastName", "email", "reason", "message"];
@@ -25,18 +25,15 @@ function getFieldErrorMessage(field) {
   return "Please check this field.";
 }
 
-/** Placeholder submit — replace with a real network call when a backend exists. */
+/** Posts to Netlify Forms — see the file header for why this can't just be a native submit. */
 async function submitInquiry(payload) {
-  // TODO: replace with e.g.
-  //   const res = await fetch("/api/contact", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(payload),
-  //   });
-  //   if (!res.ok) throw new Error("Request failed");
-  //   return res.json();
-  await new Promise((resolve) => setTimeout(resolve, 900));
-  return { ok: true };
+  const res = await fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(payload).toString(),
+  });
+  if (!res.ok) throw new Error("Request failed");
+  return true;
 }
 
 class ContactForm {
