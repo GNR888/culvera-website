@@ -8,8 +8,9 @@ import { foundersSectionContent, founders } from "../data/founders.js";
 
 function renderFounderCard(founder, index) {
   const frameNumber = String(index + 1).padStart(2, "0");
+  const scaleStyle = founder.photoScale ? ` style="--photo-scale: ${founder.photoScale}"` : "";
   const photo = founder.image
-    ? `<img class="founder-card__photo" src="${founder.image}" alt="Portrait of ${founder.name}" loading="lazy" />`
+    ? `<img class="founder-card__photo" src="${founder.image}" alt="Portrait of ${founder.name}" loading="lazy"${scaleStyle} />`
     : `<div class="founder-card__photo founder-card__photo--placeholder media-frame" role="img" aria-label="Photo ${frameNumber}, ${founder.name}, portrait to be added">
          <span class="media-frame__number">${frameNumber}</span>
          <span class="media-frame__label">Photo ${frameNumber}<br />${founder.name} portrait</span>

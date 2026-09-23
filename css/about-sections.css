@@ -322,6 +322,7 @@
   overflow: hidden;
   border-radius: 2px;
   margin-bottom: 1.5rem;
+  background: var(--color-ivory);
 }
 
 .founder-card__photo {
@@ -329,12 +330,13 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   display: block;
+  transform: scale(var(--photo-scale, 1));
   transition: transform 480ms var(--ease-out-cinematic);
 }
 
 .founder-card:hover .founder-card__photo,
 .founder-card:focus-within .founder-card__photo {
-  transform: scale(1.05);
+  transform: scale(calc(var(--photo-scale, 1) * 1.05));
 }
 
 .founder-card__photo--placeholder {

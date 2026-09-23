@@ -1636,62 +1636,6 @@
 }
 
 /* ---------------------------------------------------------------------- */
-/* "Inside the prototype" — the five data-source/method items              */
-/* ---------------------------------------------------------------------- */
-
-.prototype-details {
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 3rem);
-}
-
-.prototype-details__body {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.prototype-details__item {
-  display: grid;
-  grid-template-columns: minmax(0, 0.35fr) minmax(0, 1fr);
-  gap: 1rem;
-  transition: transform var(--hover-duration) var(--ease-out-cinematic);
-}
-
-.prototype-details__item:hover {
-  transform: translateX(6px);
-}
-
-.prototype-details__item-title {
-  font-family: var(--font-nav);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--color-field-green-deep);
-  margin: 0;
-}
-
-.prototype-details__item-body {
-  font-family: var(--font-nav);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  color: var(--color-navy);
-  opacity: 0.78;
-  margin: 0;
-}
-
-@media (max-width: 560px) {
-  .prototype-details__item {
-    grid-template-columns: 1fr;
-    gap: 0.3rem;
-  }
-}
-
-/* Reduced motion: the hero's own intro timing already has a dedicated
-   reduced-motion path (see css/variables.css + js/hero.js). Everything in
-   this file is a simple hover/fade under 250ms, which is left as-is under
-   reduced motion rather than blanket-disabled, matching modal.css. */
-
-/* ---------------------------------------------------------------------- */
 /* Editorial photography — real photos (as opposed to .media-frame         */
 /* placeholders). No border, no radius, no caption chrome: the photo is    */
 /* the accent. Two shapes cover every photo currently in use.              */
