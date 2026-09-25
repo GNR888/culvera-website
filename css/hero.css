@@ -40,6 +40,16 @@
   z-index: 0;
 }
 
+/* Never show native media chrome on the background video — in particular
+   the large play button iOS Safari overlays when autoplay is deferred. */
+.hero__video::-webkit-media-controls,
+.hero__video::-webkit-media-controls-panel,
+.hero__video::-webkit-media-controls-overlay-play-button,
+.hero__video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
 /* Soft gradient so the centered wordmark / header stay legible over bright
    footage. Kept subtle — this is not meant to darken the video materially. */
 .hero__scrim {

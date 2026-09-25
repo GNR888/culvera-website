@@ -120,6 +120,38 @@ class HeroIntro {
   }
 
   /**
+   * Background-video autoplay. Browsers only allow autoplay for muted,
+   * inline video, so those are forced on here as properties as well as
+   * attributes (iOS Safari checks the properties). If playback is still
+   * refused — e.g. iOS Low Power Mode, which is what shows the native
+   * play button — retry whenever the page becomes playable, visible, or
+   * the visitor first touches/scrolls, so it starts as soon as allowed.
+   */
+  startVideo() {
+    const video = this.video;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.controls = false;
+
+    const tryPlay = () => {
+      if (!video.paused) return;
+      video.play().catch(() => {
+        /* still blocked; the next retry trigger will try again */
+      });
+    };
+
+    tryPlay();
+    video.addEventListener("canplay", tryPlay);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) tryPlay();
+    });
+    ["touchstart", "pointerdown", "scroll", "keydown"].forEach((type) => {
+      window.addEventListener(type, tryPlay, { once: true, passive: true });
+    });
+  }
+
+  /**
    * The `loop` attribute is deliberately left off the <video> element.
    * Looping is done by hand below so we get a reliable "first complete
    * playback" signal (native looping never fires `ended`).
@@ -140,9 +172,7 @@ class HeroIntro {
       });
     });
 
-    this.video.play().catch(() => {
-      /* ignore — muted+inline autoplay should succeed in all modern browsers */
-    });
+    this.startVideo();
   }
 
   init() {

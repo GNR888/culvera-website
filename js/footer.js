@@ -8,33 +8,28 @@
  */
 import { footerData } from "./footer-data.js";
 
-function renderLinkList(links) {
-  return links
-    .map(
-      (link) => `<li><a href="${link.href}">${link.label}</a></li>`
-    )
-    .join("");
+// This module lives in js/, so the site root is one level up. Resolving
+// hrefs against it (rather than against the current page) keeps footer
+// links correct on nested pages such as research-insights/<slug>/.
+// Absolute URLs (mailto:, https:) pass through new URL() unchanged.
+const SITE_ROOT = new URL("../", import.meta.url);
+
+function resolveHref(href) {
+  return new URL(href, SITE_ROOT).href;
+}
+
+function renderLink(link) {
+  const target = link.external ? ` target="_blank" rel="noopener"` : "";
+  return `<a href="${resolveHref(link.href)}"${target}>${link.label}</a>`;
 }
 
 function renderColumn(column) {
+  const modifier = column.modifier ? ` site-footer__col--${column.modifier}` : "";
   return `
-    <nav class="site-footer__col" aria-label="${column.heading}">
+    <nav class="site-footer__col${modifier}" aria-label="${column.heading}">
       <h3 class="site-footer__heading">${column.heading}</h3>
-      <ul class="site-footer__list">${renderLinkList(column.links)}</ul>
+      <ul class="site-footer__list">${column.links.map((link) => `<li>${renderLink(link)}</li>`).join("")}</ul>
     </nav>
-  `;
-}
-
-function renderContactColumn(contact) {
-  return `
-    <div class="site-footer__col site-footer__col--contact">
-      <h3 class="site-footer__heading">${contact.heading}</h3>
-      <ul class="site-footer__list">
-        <li><a href="mailto:${contact.email}">${contact.email}</a></li>
-        <li><a href="${contact.linkedin.href}" target="_blank" rel="noopener">${contact.linkedin.label}</a></li>
-        <li><a href="${contact.instagram.href}" target="_blank" rel="noopener">${contact.instagram.label}</a></li>
-      </ul>
-    </div>
   `;
 }
 
@@ -45,15 +40,14 @@ function renderFooter(data) {
     <div class="site-footer__inner">
       <div class="site-footer__top">
         <div class="site-footer__col site-footer__col--brand">
-          <a class="site-footer__brand" href="index.html">
-            <img class="site-footer__logo" src="${data.brand.logoSrc}" alt="" aria-hidden="true" />
+          <a class="site-footer__brand" href="${resolveHref("index.html")}">
+            <img class="site-footer__logo" src="${resolveHref(data.brand.logoSrc)}" alt="" aria-hidden="true" />
             <span class="site-footer__wordmark">${data.brand.name}</span>
           </a>
           <p class="site-footer__tagline">${data.brand.tagline}</p>
         </div>
 
         ${data.columns.map(renderColumn).join("")}
-        ${renderContactColumn(data.contact)}
       </div>
 
       <div class="site-footer__divider" role="presentation"></div>
@@ -61,9 +55,7 @@ function renderFooter(data) {
       <div class="site-footer__bottom">
         <p class="site-footer__copyright">&copy; ${year} ${data.legal.holder}. All rights reserved.</p>
         <nav class="site-footer__legal" aria-label="Legal">
-          ${data.legal.links
-            .map((link) => `<a href="${link.href}">${link.label}</a>`)
-            .join("")}
+          ${data.legal.links.map(renderLink).join("")}
         </nav>
       </div>
     </div>

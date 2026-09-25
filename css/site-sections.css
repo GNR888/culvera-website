@@ -222,6 +222,14 @@
   border-radius: 12px;
 }
 
+/* Mobile only: pull the bordered diagram in from the screen edges. */
+@media (max-width: 560px) {
+  .data-convergence {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+}
+
 .data-convergence__inputs {
   display: flex;
   flex-wrap: wrap;

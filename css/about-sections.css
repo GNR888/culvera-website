@@ -163,6 +163,14 @@
   }
 }
 
+/* Mobile only: centre the stacked photo within the content width. */
+@media (max-width: 560px) {
+  .why-vietnam__media {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* ---------------------------------------------------------------------- */
 /* Our Goal                                                                 */
 /* ---------------------------------------------------------------------- */
@@ -378,6 +386,13 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     max-width: 26rem;
+  }
+}
+
+/* Mobile only: centre bios to match the centred names and photos. */
+@media (max-width: 560px) {
+  .founder-card__bio {
+    text-align: center;
   }
 }
 

@@ -25,8 +25,8 @@ export const founders = [
     bio: "Giulio is completing a Bachelor of Commerce at the University of Sydney, majoring in finance and entrepreneurship. During his year exchange at Università Bocconi, he met Kaya and Otis and built the algorithm that became the foundation of Culvera. He now works on product development and strategy, driven by building tangible solutions that have a positive impact on the world.",
   },
   {
-    name: "Kaya Kelly",
-    image: "assets/images/founders/kaya-kelly.jpg",
+    name: "Kaya Andrée",
+    image: "assets/images/founders/kaya-andree.jpg",
     photoScale: 1.3,
     bio: "Currently completing a BBA at TBS Education in Barcelona, Kaya works on Culvera's research, partnerships, and product development. She is especially interested in sustainability and in making the platform practical, accessible, and useful for the farmers and communities it is designed to support.",
   },
