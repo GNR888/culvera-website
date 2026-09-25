@@ -49,9 +49,8 @@ export const footerData = {
 
   legal: {
     holder: "Culvera AI",
-    links: [
-      { label: "Privacy", href: "privacy.html" },
-      { label: "Terms", href: "terms.html" },
-    ],
+    // Bottom-bar links (e.g. Privacy, Terms). Left empty until reviewed
+    // legal pages exist; the footer omits the links row while it's empty.
+    links: [],
   },
 };

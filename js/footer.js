@@ -54,9 +54,11 @@ function renderFooter(data) {
 
       <div class="site-footer__bottom">
         <p class="site-footer__copyright">&copy; ${year} ${data.legal.holder}. All rights reserved.</p>
-        <nav class="site-footer__legal" aria-label="Legal">
-          ${data.legal.links.map(renderLink).join("")}
-        </nav>
+        ${
+          data.legal.links.length
+            ? `<nav class="site-footer__legal" aria-label="Legal">${data.legal.links.map(renderLink).join("")}</nav>`
+            : ""
+        }
       </div>
     </div>
   `;

@@ -69,11 +69,11 @@ class HeroIntro {
         return 0;
       case "logo":
         return (
-          readCssDurationMs("--hero-logo-fade-in", 1400) +
-          readCssDurationMs("--hero-logo-hold", 850)
+          readCssDurationMs("--hero-logo-fade-in", 1000) +
+          readCssDurationMs("--hero-logo-hold", 550)
         );
       case "logo-out":
-        return readCssDurationMs("--hero-logo-fade-out", 900);
+        return readCssDurationMs("--hero-logo-fade-out", 650);
       case "wordmark-gold":
         return readCssDurationMs("--hero-wordmark-fade-in", 1100);
       case "wordmark-white":
@@ -177,7 +177,7 @@ class HeroIntro {
 
   /**
    * The intro is choreographed against the footage (the wordmark fades in
-   * over the aerial rice-terrace clip at ~2.1–4.5s), so start it when the
+   * over the aerial rice-terrace clip at ~2.1–5.6s), so start it when the
    * video actually starts rather than on page load. If the video is
    * already running, rewind it to line up; if it can't start at all
    * (autoplay blocked), run the intro anyway after a short wait.

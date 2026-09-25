@@ -1,9 +1,9 @@
 /* ==========================================================================
    Culvera AI — Editorial pages
    --------------------------------------------------------------------------
-   Research & Insights (library grid, article cards, article pages) and
-   long-form text pages (Privacy, Terms). Loaded alongside contact.css,
-   whose static header and .contact-hero editorial intro these pages reuse.
+   Research & Insights: library grid, article cards and article pages.
+   Loaded alongside contact.css, whose static header and .contact-hero
+   editorial intro these pages reuse.
 
    Same restraint as the rest of the site: Warm Ivory ground, Deep Navy
    type, Montserrat Light headings, gold for small labels and accents only.
@@ -348,7 +348,7 @@
 }
 
 /* ---------------------------------------------------------------------- */
-/* Long-form prose (article bodies, Privacy, Terms)                        */
+/* Long-form prose (article bodies)                                        */
 /* ---------------------------------------------------------------------- */
 
 .prose {
@@ -553,38 +553,4 @@
 .related-insights__all:hover,
 .related-insights__all:focus-visible {
   color: var(--color-gold);
-}
-
-/* ---------------------------------------------------------------------- */
-/* Legal pages (Privacy, Terms)                                            */
-/* ---------------------------------------------------------------------- */
-
-.legal-page {
-  padding-bottom: clamp(4rem, 8vw, 6rem);
-}
-
-.legal-page__updated {
-  font-family: var(--font-nav);
-  font-size: 0.85rem;
-  color: var(--color-navy);
-  opacity: 0.65;
-  margin: 1.25rem 0 0;
-}
-
-/* Visible marker that the copy is a draft awaiting legal review. Remove
-   the element from the page once final text is in place. */
-.legal-notice {
-  margin: 0 0 2.5rem;
-  padding: 1.1rem 1.4rem;
-  border: 1px dashed var(--color-gold);
-  border-radius: 2px;
-  font-family: var(--font-nav);
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: var(--color-navy);
-  background: rgba(197, 160, 82, 0.08);
-}
-
-.legal-notice strong {
-  font-weight: 600;
 }

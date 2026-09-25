@@ -49,9 +49,9 @@
      a derived multiplier, so "how small it starts", "how big it sits while
      visible", and "how big it grows before dissolving" can each be tuned
      on their own: */
-  --hero-logo-fade-in: 1400ms;
-  --hero-logo-hold: 850ms;
-  --hero-logo-fade-out: 900ms;
+  --hero-logo-fade-in: 1000ms;
+  --hero-logo-hold: 550ms;
+  --hero-logo-fade-out: 650ms;
   --hero-logo-scale-from: 0.28; /* initial, near-invisible size */
   --hero-logo-scale-to: 0.8; /* size while fully visible / holding */
   --hero-logo-scale-exit: 1.1; /* continues growing into this as it fades out */

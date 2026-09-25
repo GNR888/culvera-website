@@ -29,9 +29,6 @@ self-contained.
   first, topic filters, 3 → 2 → 1 column grid) plus one page per article at
   `research-insights/<slug>/`. Generated from content files; see
   "Research & Insights: adding an article" below.
-- **Privacy** (`privacy.html`) and **Terms** (`terms.html`) — draft
-  structure with bracketed placeholders and a visible "Draft for review"
-  notice; replace with reviewed legal copy and delete the notice.
 - **Global footer** — one component (`js/footer.js` + `js/footer-data.js`),
   rendered into every page via a `<footer id="site-footer"></footer>` mount
   point.
@@ -85,15 +82,13 @@ css/
                           step pipeline, the field-focus band + risk map,
                           the network diagram, CTA bands, buttons, prompt
                           chips, the app preview mock, disclaimer note
-  editorial.css           Research & Insights grid/cards/articles, plus
-                          long-form prose for Privacy and Terms
+  editorial.css           Research & Insights grid, cards and article pages
 content/
   site.mjs                Site name + public URL (used for SEO tags)
   research-insights/      Article list (articles.mjs) + one body file each
 scripts/
   build-research.mjs      Generates research-insights/ (and sitemap.xml)
 research-insights/        GENERATED article pages — don't edit by hand
-privacy.html, terms.html  Legal pages (placeholder copy)
 js/
   hero.js                 Homepage intro sequencing + video-loop/auto-scroll
   header-scroll-mode.js   Homepage-only header recolour on scroll
