@@ -206,7 +206,7 @@ function renderHead({ root, title, description, canonicalPath, ogType, image, im
 ${structuredData ? `\n  <script type="application/ld+json">\n${jsonLd(structuredData)}\n  </script>\n` : ""}</head>`;
 }
 
-function renderHeader(root) {
+function renderHeader(root, isSectionIndex) {
   return `<header class="site-header site-header--static">
     <a class="site-header__brand" href="${root}index.html">
       <img
@@ -219,12 +219,13 @@ function renderHeader(root) {
     <nav class="site-header__nav" aria-label="Primary">
       <a href="${root}demo.html">DEMO</a>
       <a href="${root}about.html">ABOUT</a>
+      <a href="${root}research-insights/"${isSectionIndex ? ' aria-current="page"' : ""}>RESEARCH</a>
       <a href="${root}contact.html">CONTACT</a>
     </nav>
   </header>`;
 }
 
-function renderPage({ head, root, main, scripts = [] }) {
+function renderPage({ head, root, main, scripts = [], isSectionIndex = false }) {
   const moduleScripts = [...scripts, "js/footer.js", "js/scroll-reveal.js"]
     .map((src) => `  <script type="module" src="${root}${src}"></script>`)
     .join("\n");
@@ -235,7 +236,7 @@ ${BANNER}
 ${head}
 <body class="contact-page">
 
-  ${renderHeader(root)}
+  ${renderHeader(root, isSectionIndex)}
 
   <main>
 ${main}
@@ -351,7 +352,7 @@ ${filters}
     },
   });
 
-  return renderPage({ head, root, main, scripts: ["js/research-filters.js"] });
+  return renderPage({ head, root, main, scripts: ["js/research-filters.js"], isSectionIndex: true });
 }
 
 // ---------------------------------------------------------------------------

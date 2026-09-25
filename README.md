@@ -37,8 +37,9 @@ self-contained.
 logo fades/scales in (0.28 → 0.8), holds, grows further while fading out
 (→ 1.1) → "CULVERA AI" wordmark fades in gold, shifts to white, holds → the
 tagline ("Farming intelligence for the decisions that matter.") fades in
-in its place → dissolves into the permanent transparent header (white logo +
-wordmark top-left, DEMO / ABOUT / CONTACT top-right) → on the video's first
+in its place → fades out. The transparent header (white logo + wordmark
+top-left, DEMO / ABOUT / RESEARCH / CONTACT top-right) is visible the whole time,
+from page load → on the video's first
 complete playthrough only, the page auto-scrolls to the support copy below
 the hero.
 

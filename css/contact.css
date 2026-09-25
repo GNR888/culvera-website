@@ -26,11 +26,6 @@ body.contact-page {
   background: rgba(245, 241, 232, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(30, 42, 53, 0.08);
-  /* hero.css defaults .site-header to pointer-events: none and only
-     re-enables it for body[data-hero-stage="header"|"done"] — which only
-     ever exists on index.html. Every page using this static variant needs
-     its own override, or the header is genuinely unclickable. */
-  pointer-events: auto;
 }
 
 .site-header--static .site-header__brand,

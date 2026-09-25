@@ -203,35 +203,11 @@ body[data-hero-stage="tagline"] .hero__tagline {
   justify-content: space-between;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   background: transparent;
-  pointer-events: none;
 }
 
-.site-header__brand,
-.site-header__nav {
-  opacity: 0;
-  transform: translateY(-8px);
-  transition:
-    opacity var(--hero-header-transition) var(--ease-out-cinematic),
-    transform var(--hero-header-transition) var(--ease-out-cinematic);
-}
-
-body[data-hero-stage="header"] .site-header,
-body[data-hero-stage="done"] .site-header {
-  pointer-events: auto;
-}
-
-body[data-hero-stage="header"] .site-header__brand,
-body[data-hero-stage="done"] .site-header__brand {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-body[data-hero-stage="header"] .site-header__nav,
-body[data-hero-stage="done"] .site-header__nav {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 120ms; /* nav settles a beat after the brand mark */
-}
+/* The header is visible and clickable from page load, including while
+   the hero intro plays; the intro only animates the centred logo,
+   wordmark and tagline. */
 
 .site-header__brand {
   display: flex;
