@@ -17,6 +17,10 @@
     rel="stylesheet"
   />
 
+  <!-- The hero video's first frame, shown instantly while the video loads
+       so the page never opens on a black screen. -->
+  <link rel="preload" as="image" href="assets/images/hero-poster.jpg" fetchpriority="high" />
+
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/hero.css" />
@@ -62,6 +66,7 @@
         disablepictureinpicture
         disableremoteplayback
         preload="auto"
+        poster="assets/images/hero-poster.jpg"
         aria-hidden="true"
         tabindex="-1"
       >

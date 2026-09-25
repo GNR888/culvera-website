@@ -94,11 +94,20 @@ class HeroIntro {
     }
   }
 
-  async runIntroSequence() {
+  /**
+   * @param {number} offsetMs - how far the video had already played when
+   *   the intro started; that much of the schedule is skipped so the
+   *   stages stay aligned with the footage.
+   */
+  async runIntroSequence(offsetMs = 0) {
+    let toSkip = offsetMs;
     this.setStage("initial");
     for (const stage of STAGE_SEQUENCE) {
       this.setStage(stage);
-      const hold = this.getStageHoldDuration(stage);
+      let hold = this.getStageHoldDuration(stage);
+      const skipped = Math.min(toSkip, hold);
+      hold -= skipped;
+      toSkip -= skipped;
       if (hold > 0) await sleep(hold);
     }
   }
@@ -177,22 +186,27 @@ class HeroIntro {
 
   /**
    * The intro is choreographed against the footage (the wordmark fades in
-   * over the aerial rice-terrace clip at ~2.1–5.6s), so start it when the
-   * video actually starts rather than on page load. If the video is
-   * already running, rewind it to line up; if it can't start at all
-   * (autoplay blocked), run the intro anyway after a short wait.
+   * over the aerial rice-terrace clip at ~2.1–5.6s), so start it once
+   * video frames are actually on screen rather than on page load.
+   * Resolves with how far the video has already played (ms), which the
+   * intro skips ahead by. The video is never seeked here: rewinding a
+   * clip that is still buffering is what caused a visible stutter. If the
+   * video can't start at all (autoplay blocked), the intro runs anyway
+   * after a short wait, over the poster frame.
    */
   waitForVideoStart(timeoutMs = 1500) {
     const video = this.video;
-    if (!video.paused) {
-      video.currentTime = 0;
-      return Promise.resolve();
-    }
+    const HAVE_FUTURE_DATA = 3;
+    const alreadyPlaying = () =>
+      !video.paused && video.readyState >= HAVE_FUTURE_DATA && video.currentTime > 0;
+
+    if (alreadyPlaying()) return Promise.resolve(video.currentTime * 1000);
+
     return new Promise((resolve) => {
       const done = () => {
         clearTimeout(timer);
         video.removeEventListener("playing", done);
-        resolve();
+        resolve(video.currentTime * 1000);
       };
       const timer = setTimeout(done, timeoutMs);
       video.addEventListener("playing", done);
@@ -201,8 +215,8 @@ class HeroIntro {
 
   async init() {
     this.bindVideoLoop();
-    await this.waitForVideoStart();
-    this.runIntroSequence();
+    const offsetMs = await this.waitForVideoStart();
+    this.runIntroSequence(offsetMs);
   }
 }
 

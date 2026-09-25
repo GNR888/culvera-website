@@ -27,7 +27,12 @@
   height: 100vh;
   min-height: 100vh;
   overflow: hidden;
-  background: var(--color-black);
+  /* A 48px-wide copy of the video's first frame, inlined so it paints with
+     the very first render (no download). It shows, softly upscaled, for
+     the moment before the poster image (index.html) or the video arrive,
+     so the page never opens on a black screen. Regenerate it if the
+     video's opening shot changes. */
+  background: var(--color-black) url("data:image/jpeg;base64,/9j//gAQTGF2YzYxLjE5LjEwMAD/2wBDAAgMDA4MDhAQEBAQEBMSExQUFBMTExMUFBQVFRUZGRkVFRUUFBUVGBgZGRscGxoaGRocHB4eHiQkIiIqKiszMz7/xAB3AAADAQEBAAAAAAAAAAAAAAADBgUHBAgBAQADAQAAAAAAAAAAAAAAAAAEAwEFEAABAwIEBAQHAQAAAAAAAAABAAIRBAMSITFRQZEjBQZhQnGBotFSsTMTFBEAAgICAwEBAQAAAAAAAAAAAAECAxFRUkGRIRKB/8AAEQgAHAAwAwEiAAIRAAMRAP/aAAwDAQACEQMRAD8A2m0/+jGu4kCY3iUTENxzXmCx3nuls/svnT7s1dtd6qXN6tu9iMyWtOpRSj3LBS7Gus/0363dZdbiY4OGmSKsZpq6psHEzG3EOAJy1ziYPkqjO/VDWkOF0xBHTdPton6jzj6FZtM1JDLoWcDxOWiH2LrjMSGOGW5S1U+Kao3elbuMbOhtzEbyM5TK5L0OzSbFK3VOHpbyVFlY/ZnJK7dW+xVBq4k646IzQzsrXjg1E/3E8BzKWQTvt+ESTBUd1xyY/rK76vy+YqRcvuPqcPifquFxM68FzlxKvjWkbg//2Q==") center / cover no-repeat;
 }
 
 .hero__video {
