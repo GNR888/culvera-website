@@ -175,8 +175,33 @@ class HeroIntro {
     this.startVideo();
   }
 
-  init() {
+  /**
+   * The intro is choreographed against the footage (the wordmark fades in
+   * over the aerial rice-terrace clip at ~2.1–4.5s), so start it when the
+   * video actually starts rather than on page load. If the video is
+   * already running, rewind it to line up; if it can't start at all
+   * (autoplay blocked), run the intro anyway after a short wait.
+   */
+  waitForVideoStart(timeoutMs = 1500) {
+    const video = this.video;
+    if (!video.paused) {
+      video.currentTime = 0;
+      return Promise.resolve();
+    }
+    return new Promise((resolve) => {
+      const done = () => {
+        clearTimeout(timer);
+        video.removeEventListener("playing", done);
+        resolve();
+      };
+      const timer = setTimeout(done, timeoutMs);
+      video.addEventListener("playing", done);
+    });
+  }
+
+  async init() {
     this.bindVideoLoop();
+    await this.waitForVideoStart();
     this.runIntroSequence();
   }
 }
